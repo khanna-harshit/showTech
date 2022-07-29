@@ -1,0 +1,55 @@
+
+SONiC Software Version: SONiC.202111-CLS.10-0777e60a9
+Distribution: Debian 11.3
+Kernel: 5.10.0-8-2-amd64
+Build commit: 0777e60a9
+Build date: Mon May  9 16:56:29 UTC 2022
+Built by: kannan@cthgd047
+
+Platform: x86_64-cel_seastone-r0
+HwSKU: Seastone-DX010
+ASIC: broadcom
+ASIC Count: 1
+Serial Number: N/A
+Model Number: N/A
+Hardware Revision: N/A
+Uptime: 09:14:29 up 1 day,  6:44,  1 user,  load average: 0.81, 0.66, 0.70
+
+Docker images:
+REPOSITORY                    TAG                       IMAGE ID       SIZE
+docker-dhcp-relay             latest                    bd2ab6bdb0b0   439MB
+docker-syncd-brcm             202111-CLS.10-0777e60a9   bbc47e399751   788MB
+docker-syncd-brcm             latest                    bbc47e399751   788MB
+docker-teamd                  202111-CLS.10-0777e60a9   b7d00553257b   440MB
+docker-teamd                  latest                    b7d00553257b   440MB
+docker-sonic-mgmt-framework   202111-CLS.10-0777e60a9   50042fe73f4b   588MB
+docker-sonic-mgmt-framework   latest                    50042fe73f4b   588MB
+docker-platform-monitor       202111-CLS.10-0777e60a9   f9913875a9b3   690MB
+docker-platform-monitor       latest                    f9913875a9b3   690MB
+docker-snmp                   202111-CLS.10-0777e60a9   c133ca25f340   469MB
+docker-snmp                   latest                    c133ca25f340   469MB
+docker-sonic-telemetry        202111-CLS.10-0777e60a9   82b9a7b6b9d1   514MB
+docker-sonic-telemetry        latest                    82b9a7b6b9d1   514MB
+docker-sflow                  202111-CLS.10-0777e60a9   400929617a5c   440MB
+docker-sflow                  latest                    400929617a5c   440MB
+docker-orchagent              202111-CLS.10-0777e60a9   6a252d439266   458MB
+docker-orchagent              latest                    6a252d439266   458MB
+docker-nat                    202111-CLS.10-0777e60a9   e5d9c6d82928   442MB
+docker-nat                    latest                    e5d9c6d82928   442MB
+docker-router-advertiser      202111-CLS.10-0777e60a9   579e1e3bbbcd   425MB
+docker-router-advertiser      latest                    579e1e3bbbcd   425MB
+docker-lldp                   202111-CLS.10-0777e60a9   c6490ff786b6   465MB
+docker-lldp                   latest                    c6490ff786b6   465MB
+docker-mux                    202111-CLS.10-0777e60a9   54533b3ade63   478MB
+docker-mux                    latest                    54533b3ade63   478MB
+docker-macsec                 202111-CLS.10-0777e60a9   fabc1f0fae0a   442MB
+docker-macsec                 latest                    fabc1f0fae0a   442MB
+docker-iccpd                  202111-CLS.10-0777e60a9   9f2aaa71f3a9   440MB
+docker-iccpd                  latest                    9f2aaa71f3a9   440MB
+docker-fpm-frr                202111-CLS.10-0777e60a9   ff1d83b5c2a7   458MB
+docker-fpm-frr                latest                    ff1d83b5c2a7   458MB
+docker-gbsyncd-credo          202111-CLS.10-0777e60a9   227dffb866af   480MB
+docker-gbsyncd-credo          latest                    227dffb866af   480MB
+docker-database               202111-CLS.10-0777e60a9   c4195deedae8   425MB
+docker-database               latest                    c4195deedae8   425MB
+

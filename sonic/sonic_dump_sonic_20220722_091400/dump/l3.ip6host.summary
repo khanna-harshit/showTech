@@ -1,0 +1,6 @@
+timeout --foreground 5m bcmcmd "l3 ip6host show"
+l3 ip6host show
+Unit 0, free IPv6 table entries: 4096
+Entry VRF IP address                                   Mac Address        INTF MOD PORT     CLASS HIT     H/W Index
+
+drivshell>

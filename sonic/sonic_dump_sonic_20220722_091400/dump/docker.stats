@@ -1,0 +1,12 @@
+CONTAINER ID   NAME             CPU %     MEM USAGE / LIMIT     MEM %     NET I/O   BLOCK I/O         PIDS
+de46b0dd1c4c   telemetry        1.31%     118.8MiB / 15.61GiB   0.74%     0B / 0B   36.7MB / 86kB     26
+ac7d4d7e1968   mgmt-framework   0.02%     117.7MiB / 15.61GiB   0.74%     0B / 0B   26.4MB / 69.6kB   16
+0ac10dcf7239   snmp             17.85%    89.35MiB / 15.61GiB   0.56%     0B / 0B   12.4MB / 98.3kB   9
+ff91e2c99955   radv             0.06%     31.43MiB / 15.61GiB   0.20%     0B / 0B   578kB / 77.8kB    6
+e6586a927f97   lldp             0.04%     50.61MiB / 15.61GiB   0.32%     0B / 0B   6.35MB / 115kB    11
+e1cd941c4f55   syncd            34.55%    419MiB / 15.61GiB     2.62%     0B / 0B   230MB / 324kB     45
+760a8359bad8   teamd            0.10%     30.45MiB / 15.61GiB   0.19%     0B / 0B   3.3MB / 90.1kB    12
+878d6efc0bde   swss             0.19%     62.62MiB / 15.61GiB   0.39%     0B / 0B   20.8MB / 299kB    42
+bb0ec5cdbe98   bgp              0.17%     151.5MiB / 15.61GiB   0.95%     0B / 0B   17.2MB / 178MB    22
+ad980aa01d14   pmon             16.82%    114.8MiB / 15.61GiB   0.72%     0B / 0B   31.9MB / 201kB    16
+87e5cc401e70   database         8.88%     111.7MiB / 15.61GiB   0.70%     0B / 0B   41.1MB / 65.5kB   11

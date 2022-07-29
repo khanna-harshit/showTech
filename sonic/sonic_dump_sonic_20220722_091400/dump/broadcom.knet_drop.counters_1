@@ -1,0 +1,53 @@
+Device debug stats (unit 0):
+  Tx drop no skb               0
+  Tx drop rcpu encap           0
+  Tx drop rcpu sig             0
+  Tx drop rcpu meta            0
+  Tx drop pad failed           0
+  Tx drop no resource          0
+  Tx drop callback             0
+  Tx drop no link              0
+  Tx drop oversized            0
+  Tx suspends                  0
+  Rx0 filter to api            0
+  Rx0 filter to netif     116750
+  Rx0 mirror to api            0
+  Rx0 mirror to netif          0
+  Rx0 drop no skb              0
+  Rx0 drop no match            0
+  Rx0 drop unkn netif          0
+  Rx0 drop unkn dest           0
+  Rx0 drop callback            0
+  Rx0 drop no link             3
+  Rx0 sync error               0
+  Rx0 sync retry               0
+  Rx0 sync maxloop             0
+  Rx0 drop no buffer           0
+  Rx1 filter to api            0
+  Rx1 filter to netif          0
+  Rx1 mirror to api            0
+  Rx1 mirror to netif          0
+  Rx1 drop no skb              0
+  Rx1 drop no match            0
+  Rx1 drop unkn netif          0
+  Rx1 drop unkn dest           0
+  Rx1 drop callback            0
+  Rx1 drop no link             0
+  Rx1 sync error               0
+  Rx1 sync retry               0
+  Rx1 sync maxloop             0
+  Rx1 drop no buffer           0
+  Rx2 filter to api            0
+  Rx2 filter to netif          0
+  Rx2 mirror to api            0
+  Rx2 mirror to netif          0
+  Rx2 drop no skb              0
+  Rx2 drop no match            0
+  Rx2 drop unkn netif          0
+  Rx2 drop unkn dest           0
+  Rx2 drop callback            0
+  Rx2 drop no link             0
+  Rx2 sync error               0
+  Rx2 sync retry               0
+  Rx2 sync maxloop             0
+  Rx2 drop no buffer           0

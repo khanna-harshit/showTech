@@ -1,0 +1,34 @@
+Port         Presence
+-----------  -----------
+Ethernet0    Present
+Ethernet4    Present
+Ethernet8    Present
+Ethernet12   Present
+Ethernet16   Not present
+Ethernet20   Not present
+Ethernet24   Not present
+Ethernet28   Not present
+Ethernet32   Not present
+Ethernet36   Not present
+Ethernet40   Not present
+Ethernet44   Not present
+Ethernet48   Not present
+Ethernet52   Not present
+Ethernet56   Not present
+Ethernet60   Not present
+Ethernet64   Not present
+Ethernet68   Not present
+Ethernet72   Not present
+Ethernet76   Not present
+Ethernet80   Not present
+Ethernet84   Not present
+Ethernet88   Not present
+Ethernet92   Not present
+Ethernet96   Not present
+Ethernet100  Not present
+Ethernet104  Not present
+Ethernet108  Not present
+Ethernet112  Not present
+Ethernet116  Not present
+Ethernet120  Not present
+Ethernet124  Not present

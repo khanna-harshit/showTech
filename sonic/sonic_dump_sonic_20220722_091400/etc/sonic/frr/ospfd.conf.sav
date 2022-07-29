@@ -1,0 +1,5 @@
+! template: ospfd/ospfd.conf.j2
+!
+! OSPF configuration using config DB OSPF instance tables
+!
+

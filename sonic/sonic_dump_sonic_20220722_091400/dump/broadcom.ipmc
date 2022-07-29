@@ -1,0 +1,5 @@
+timeout --foreground 5m bcmcmd "ipmc table show"
+ipmc table show
+SRC IP ADDRESS  MC IP ADDRESS     VLAN MOD PORT V COS TS   GROUP     VRF
+GROUP-L2  CLASS HIT L3_IIF
+drivshell>

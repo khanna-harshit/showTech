@@ -1,0 +1,41 @@
+Basic info: size of leaf: 48 bytes, size of tnode: 40 bytes.
+Main:
+	Aver depth:     2.85
+	Max depth:      3
+	Leaves:         35
+	Prefixes:       35
+	Internal nodes: 4
+	  2: 2  3: 1  5: 1
+	Pointers: 48
+Null ptrs: 10
+Total size: 5  kB
+
+Counters:
+---------
+gets = 328204
+backtracks = 0
+semantic match passed = 328197
+semantic match miss = 0
+null node hit= 1393
+skipped node resize = 0
+
+Local:
+	Aver depth:     2.97
+	Max depth:      4
+	Leaves:         44
+	Prefixes:       45
+	Internal nodes: 11
+	  1: 3  2: 6  3: 1  5: 1
+	Pointers: 70
+Null ptrs: 16
+Total size: 6  kB
+
+Counters:
+---------
+gets = 1294093
+backtracks = 0
+semantic match passed = 918519
+semantic match miss = 0
+null node hit= 3485
+skipped node resize = 0
+

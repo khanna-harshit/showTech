@@ -1,0 +1,337 @@
+#-----------------------------------------------------------------------------------------
+
+# Screen manager and declare all the screens
+Manager:
+    MyLayout:
+    MyPopup:
+    Analyse:
+    Results:
+
+
+ #----------------------------------------------------------------------------------------
+
+<Results@ScrollView>
+    name:'Results'
+    RelativeLayout:
+        ScrollView:
+            Label:
+                id: result
+                markup: True
+                size_hint_y: None
+                height: self.texture_size[1]
+                text_size: self.width, None
+                text: ''
+        ScrollView:
+            GridLayout:
+                id: container1
+                cols: 1
+                size_hint: None, None
+                width: root.width
+                height: self.minimum_height  # let the GridLayout set its own height as needeed
+                pos_hint: {'center_x': .5, 'center_y': .5}
+        BoxLayout:
+            Button:
+                text: "Back"
+                font_size: 24
+                size_hint: 1, 0.06
+                on_press: root.ChangeFromResultsToMyLayout()
+
+#-------------------------------------------------------------------------------------------
+
+<Analyse@BoxLayout>
+    name:'Analyse'
+    RelativeLayout:
+        BoxLayout:
+            orientation: "vertical"
+            padding: 50
+		    spacing: 20
+            Image:
+
+                source:'assets/Analyze.jpg'
+                keep_ratio: True
+                allow_stretch: True
+                opacity: 0.8
+                size_hint: 0.4, 0.4
+                pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+            Label:
+                text: "Analysing....."
+                font_size: 24
+                size_hint: 1, 0.06
+
+#-------------------------------------------------------------------------------------------------------
+
+
+<MyPopup@BoxLayout>
+    name:'MyPopup'
+    RelativeLayout:
+        BoxLayout:
+            size:root.width, root.height
+
+            orientation: "vertical"
+            padding:40
+            FileChooserIconView:
+                id:filechooser
+                filters: [lambda folder, filename:  filename.endswith('.tar.gz')]
+            Button:
+                id: upload_file
+                text: "upload"
+                font_size: 24
+                size_hint: 1, 0.06
+                on_press: root.upload(filechooser.selection, filechooser.path)
+                on_release: root.ChangeFromPopupToMyLayout()
+
+
+#------------------------------------------------------------------------------------------
+
+<MyLayout@BoxLayout>
+    name: 'MyLayout'
+    size:root.width, root.height
+    orientation:"horizontal"
+    
+
+    RelativeLayout:
+        BoxLayout:
+            padding:40
+            orientation :"horizontal"
+
+            size_hint: 1,None
+            
+            size: root.width , root.height
+            BoxLayout:
+                orientation :"vertical"
+
+                
+                GridLayout:
+                    cols:1
+
+
+                   
+                    Label:
+                        text: "Show Tech Analyser"
+                        color: 30/255,144/255, 247/255, 0.8
+
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        size_hint:0.35, 0.06
+                        bold: True
+                        font_size:40
+                    
+
+                GridLayout:
+
+                    size_hint:1, 0.2
+                    cols:5
+                    Label:
+                        text: "Paste the "
+                        color: 0, 4/255, 8/255, 1
+                        #size_hint:0.35,0.06
+
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        font_size:20
+
+                    Label:
+                        text: "SONIC "
+                        color: 0, 4/255, 8/255, 1
+                        size_hint:0.7, 0.06
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+
+                        font_size:20
+
+                    Button:
+                        text: 'show tech'
+                        font_size:20
+                        background_normal: ''
+                        #size_hint:0.38, 0.06
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color:243/255, 11/255, 11/255, 0.8
+                        bold:True
+                    Label:
+                        text: "output into the textfield: "
+                        color: 0, 4/255, 8/255, 1
+                        size_hint:0.7, 0.06
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+
+                        font_size:20
+                    Label:
+                        text:''
+                GridLayout:
+                    cols:1
+                    pos_hint:{'x':0 , 'y':1}
+                    TextInput:
+                        id:text_input
+                        multiline:True
+
+                GridLayout:
+
+                    cols:3
+                    size_hint:1, 0.2
+                    Button:
+                        text: 'Analyse'
+                        font_size:20
+                        background_normal: ''
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color:243/255, 11/255, 11/255, 0.8
+                        bold:True
+                        size_hint:0.2, 0.06
+                        on_press:root.analyse_text()
+                    Button:
+                        text: 'reset'
+                        font_size:20
+                        background_normal: ''
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color: 30/255,144/255, 247/255, 0.8
+                        bold:True
+                        size_hint:0.2, 0.06
+                        on_press:root.reset_text()
+
+                    Label:
+
+                        text:''
+                Label:
+                    text:''
+                    size_hint:1, 0.4
+
+                GridLayout:
+
+                    size_hint:1, 0.2
+
+                    cols:5
+
+                    Label:
+                        text: "Upload the "
+                        color: 0, 4/255, 8/255, 1
+
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        size_hint:0.35, 0.06
+
+                        font_size:20
+                    Label:
+                        text: "SONIC "
+                        color: 0, 4/255, 8/255, 1
+                        size_hint:0.7, 0.06
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+
+                        font_size:20
+                    Button:
+                        text: 'show tech'
+                        font_size:20
+                        background_normal: ''
+                        size_hint:0.38, 0.06
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color:243/255, 11/255, 11/255, 0.8
+                        bold:True
+
+                    Label:
+                        text: "file:"
+                        color: 0, 4/255, 8/255, 1
+
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        size_hint:0.08, 0.06
+
+                        font_size:20
+                    Label:
+                        text:''
+                GridLayout:
+                    size_hint:1, 0.2
+                    cols:3
+
+                    Button:
+                        text: 'Choose file'
+                        font_size:20
+                        background_normal: ''
+                        size_hint:0.9, 0.06
+                        background_color: 10/255, 139/255, 237/255, 0.8
+                        color:0, 4/255, 8/255, 1
+                        on_release:
+                            app.root.current = 'MyPopup'
+
+
+                    Label:
+                        id: file_choosen
+                        text:'no file choosen'
+                        font_size:15
+                        color: 0, 4/255, 8/255, 1
+                        canvas.before:
+                            Color:
+                                rgba: 164/255, 163/255, 167/255, 0.83
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        padding:
+                        size_hint:1, 0.06
+                    Label:
+                        text:''
+
+                GridLayout:
+
+                    size_hint:1, 0.2
+                    cols:3
+
+                    Button:
+                        text: 'Analyse'
+                        font_size:20
+                        background_normal: ''
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color:243/255, 11/255, 11/255, 0.8
+                        bold:True
+                        size_hint:0.2, 0.02
+                        on_press:root.analyse_file()
+
+                    Button:
+                        text: 'reset'
+                        font_size:20
+                        background_normal: ''
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        color: 30/255,144/255, 247/255, 0.8
+                        bold:True
+                        size_hint:0.2, 0.2
+                        on_press: root.reset_file()
+
+
+                    Label:
+
+                        text:''
+
+#-------------------------------------------------------------------------------------------------------------

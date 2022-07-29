@@ -1,0 +1,42 @@
+           CPU0       CPU1       CPU2       CPU3       
+  0:          5          0          0          0   IO-APIC   2-edge      timer
+  4:          0          0        329          0   IO-APIC   4-edge      ttyS0
+  8:          0          1          0          0   IO-APIC   8-edge      rtc0
+  9:          0          0          0          0   IO-APIC   9-fasteoi   acpi
+ 16:          0   31833502          0          0   IO-APIC  16-fasteoi   linux-kernel-bde
+ 18:         12          0          0          0   IO-APIC  18-fasteoi   i801_smbus
+ 23:          0          0         61          0   IO-APIC  23-fasteoi   ehci_hcd:usb1
+ 24:          0          0          0          0   PCI-MSI 16384-edge      PCIe PME, aerdrv
+ 25:          0          0          0          0   PCI-MSI 32768-edge      PCIe PME, aerdrv
+ 26:          0          0          0          0   PCI-MSI 49152-edge      PCIe PME, aerdrv
+ 27:          0          0          0    5063256   PCI-MSI 311296-edge      ismt-msi
+ 28:          2          0          0          0   PCI-MSI 327680-edge      eth0
+ 29:          0      87645          0          0   PCI-MSI 327681-edge      eth0-rx-0
+ 30:          0          0      62106          0   PCI-MSI 327682-edge      eth0-rx-1
+ 31:          0          0          0      58194   PCI-MSI 327683-edge      eth0-rx-2
+ 32:      58396          0          0          0   PCI-MSI 327684-edge      eth0-rx-3
+ 33:          0      59497          0          0   PCI-MSI 327685-edge      eth0-tx-0
+ 34:          0          0      55990          0   PCI-MSI 327686-edge      eth0-tx-1
+ 35:          0          0          0      55351   PCI-MSI 327687-edge      eth0-tx-2
+ 36:      55335          0          0          0   PCI-MSI 327688-edge      eth0-tx-3
+ 37:          0     266292          0          0   PCI-MSI 376832-edge      ahci[0000:00:17.0]
+ 38:          0          0          0          0   PCI-MSI 393216-edge      ahci[0000:00:18.0]
+NMI:       1492       1550       1914       1465   Non-maskable interrupts
+LOC:   23763303   26268395   23908270   25748691   Local timer interrupts
+SPU:          0          0          0          0   Spurious interrupts
+PMI:       1492       1550       1914       1465   Performance monitoring interrupts
+IWI:          0          0          4          0   IRQ work interrupts
+RTR:          0          0          0          0   APIC ICR read retries
+RES:    1141630    1272873    1459837    1212025   Rescheduling interrupts
+CAL:    4407858    6698073    3208469    5392430   Function call interrupts
+TLB:    2380628    2368140    2192281    2299078   TLB shootdowns
+TRM:          0          0          0          0   Thermal event interrupts
+THR:          0          0          0          0   Threshold APIC interrupts
+DFR:          0          0          0          0   Deferred Error APIC interrupts
+MCE:          0          0          0          0   Machine check exceptions
+MCP:        356        356        356        356   Machine check polls
+ERR:          0
+MIS:          0
+PIN:          0          0          0          0   Posted-interrupt notification event
+NPI:          0          0          0          0   Nested posted-interrupt event
+PIW:          0          0          0          0   Posted-interrupt wakeup event

@@ -1,0 +1,293 @@
+{
+    "DEVICE_METADATA": {
+        "localhost": {
+            "buffer_model": "traditional",
+            "default_bgp_status": "up",
+            "default_pfcwd_status": "disable"
+        }
+    },
+    "CRM": {
+        "Config": {
+            "polling_interval": "300",
+            "ipv4_route_threshold_type": "percentage",
+            "ipv4_route_low_threshold": "70",
+            "ipv4_route_high_threshold": "85",
+            "ipv6_route_threshold_type": "percentage",
+            "ipv6_route_low_threshold": "70",
+            "ipv6_route_high_threshold": "85",
+            "ipv4_nexthop_threshold_type": "percentage",
+            "ipv4_nexthop_low_threshold": "70",
+            "ipv4_nexthop_high_threshold": "85",
+            "ipv6_nexthop_threshold_type": "percentage",
+            "ipv6_nexthop_low_threshold": "70",
+            "ipv6_nexthop_high_threshold": "85",
+            "ipv4_neighbor_threshold_type": "percentage",
+            "ipv4_neighbor_low_threshold": "70",
+            "ipv4_neighbor_high_threshold": "85",
+            "ipv6_neighbor_threshold_type": "percentage",
+            "ipv6_neighbor_low_threshold": "70",
+            "ipv6_neighbor_high_threshold": "85",
+            "nexthop_group_member_threshold_type": "percentage",
+            "nexthop_group_member_low_threshold": "70",
+            "nexthop_group_member_high_threshold": "85",
+            "nexthop_group_threshold_type": "percentage",
+            "nexthop_group_low_threshold": "70",
+            "nexthop_group_high_threshold": "85",
+            "acl_table_threshold_type": "percentage",
+            "acl_table_low_threshold": "70",
+            "acl_table_high_threshold": "85",
+            "acl_group_threshold_type": "percentage",
+            "acl_group_low_threshold": "70",
+            "acl_group_high_threshold": "85",
+            "acl_entry_threshold_type": "percentage",
+            "acl_entry_low_threshold": "70",
+            "acl_entry_high_threshold": "85",
+            "acl_counter_threshold_type": "percentage",
+            "acl_counter_low_threshold": "70",
+            "acl_counter_high_threshold": "85",
+            "fdb_entry_threshold_type": "percentage",
+            "fdb_entry_low_threshold": "70",
+            "fdb_entry_high_threshold": "85",
+            "snat_entry_threshold_type": "percentage",
+            "snat_entry_low_threshold": "70",
+            "snat_entry_high_threshold": "85",
+            "dnat_entry_threshold_type": "percentage",
+            "dnat_entry_low_threshold": "70",
+            "dnat_entry_high_threshold": "85",
+            "ipmc_entry_threshold_type": "percentage",
+            "ipmc_entry_low_threshold": "70",
+            "ipmc_entry_high_threshold": "85",
+            "mpls_inseg_threshold_type": "percentage",
+            "mpls_inseg_low_threshold": "70",
+            "mpls_inseg_high_threshold": "85",
+            "mpls_nexthop_threshold_type": "percentage",
+            "mpls_nexthop_low_threshold": "70",
+            "mpls_nexthop_high_threshold": "85"
+        }
+    },
+    "FLEX_COUNTER_TABLE": {
+        "ACL": {
+            "FLEX_COUNTER_STATUS": "enable",
+            "FLEX_COUNTER_DELAY_STATUS": "true",
+            "POLL_INTERVAL": "10000"
+        }
+    },
+    "FEATURE": {
+        "bgp": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "database": {
+            "state": "always_enabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": true,
+            "auto_restart": "always_enabled",
+            "high_mem_alert": "disabled"
+        },
+        "lldp": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "pmon": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "radv": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "snmp": {
+            "state": "enabled",
+            "has_timer": true,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "swss": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "syncd": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "teamd": {
+            "state": "enabled",
+            "has_timer": false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "dhcp_relay": {
+            "state": "{% if not (DEVICE_METADATA is defined and DEVICE_METADATA['localhost'] is defined and DEVICE_METADATA['localhost']['type'] is defined and DEVICE_METADATA['localhost']['type'] != 'ToRRouter') %}enabled{% else %}disabled{% endif %}",
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled",
+            "set_owner": "local",
+            "has_timer": "False",
+            "has_global_scope": "True",
+            "has_per_asic_scope": "False"
+        },
+        "iccpd": {
+            "state": "disabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "mgmt-framework": {
+            "state": "enabled",
+            "has_timer": true,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "mux": {
+            "state": "{% if 'subtype' in DEVICE_METADATA['localhost'] and DEVICE_METADATA['localhost']['subtype'] == 'DualToR' %}enabled{% else %}always_disabled{% endif %}",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "nat": {
+            "state": "disabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "sflow": {
+            "state": "disabled",
+            "has_timer": false,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "macsec": {
+            "state": "disabled",
+            "has_timer": false,
+            "has_global_scope": false,
+            "has_per_asic_scope": true,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        },
+        "telemetry": {
+            "state": "enabled",
+            "has_timer": true,
+            "has_global_scope": true,
+            "has_per_asic_scope": false,
+            "auto_restart": "enabled",
+            "high_mem_alert": "disabled"
+        }
+    },
+    "AUTO_TECHSUPPORT": {
+        "GLOBAL": {
+            "state": "enabled",
+            "rate_limit_interval": "180",
+            "max_techsupport_limit": "10.0",
+            "max_core_limit": "5.0",
+            "since": "2 days ago"
+        }
+    },
+    "AUTO_TECHSUPPORT_FEATURE": {
+        "bgp": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "database": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "lldp": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "pmon": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "radv": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "snmp": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "swss": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "syncd": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "teamd": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "dhcp_relay": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "iccpd": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "mgmt-framework": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "mux": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "nat": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "sflow": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "macsec": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        },
+        "telemetry": {
+            "state": "enabled",
+            "rate_limit_interval": "600"
+        }
+    }
+}

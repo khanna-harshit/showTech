@@ -1,0 +1,3 @@
+timeout --foreground 5m bcmcmd "l3 multipath show"
+l3 multipath show
+drivshell>

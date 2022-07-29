@@ -1,0 +1,120 @@
+default via 192.168.10.1 dev eth0 
+10.0.0.2/31 dev Ethernet4 proto kernel scope link src 10.0.0.2 
+10.0.0.4/31 dev Ethernet8 proto kernel scope link src 10.0.0.4 
+10.0.0.6/31 dev Ethernet12 proto kernel scope link src 10.0.0.6 
+10.0.0.8/31 dev Ethernet16 proto kernel scope link src 10.0.0.8 linkdown 
+10.0.0.10/31 dev Ethernet20 proto kernel scope link src 10.0.0.10 linkdown 
+10.0.0.12/31 dev Ethernet24 proto kernel scope link src 10.0.0.12 linkdown 
+10.0.0.14/31 dev Ethernet28 proto kernel scope link src 10.0.0.14 linkdown 
+10.0.0.16/31 dev Ethernet32 proto kernel scope link src 10.0.0.16 linkdown 
+10.0.0.18/31 dev Ethernet36 proto kernel scope link src 10.0.0.18 linkdown 
+10.0.0.20/31 dev Ethernet40 proto kernel scope link src 10.0.0.20 linkdown 
+10.0.0.22/31 dev Ethernet44 proto kernel scope link src 10.0.0.22 linkdown 
+10.0.0.24/31 dev Ethernet48 proto kernel scope link src 10.0.0.24 linkdown 
+10.0.0.26/31 dev Ethernet52 proto kernel scope link src 10.0.0.26 linkdown 
+10.0.0.28/31 dev Ethernet56 proto kernel scope link src 10.0.0.28 linkdown 
+10.0.0.30/31 dev Ethernet60 proto kernel scope link src 10.0.0.30 linkdown 
+10.0.0.32/31 dev Ethernet64 proto kernel scope link src 10.0.0.32 linkdown 
+10.0.0.34/31 dev Ethernet68 proto kernel scope link src 10.0.0.34 linkdown 
+10.0.0.36/31 dev Ethernet72 proto kernel scope link src 10.0.0.36 linkdown 
+10.0.0.38/31 dev Ethernet76 proto kernel scope link src 10.0.0.38 linkdown 
+10.0.0.40/31 dev Ethernet80 proto kernel scope link src 10.0.0.40 linkdown 
+10.0.0.42/31 dev Ethernet84 proto kernel scope link src 10.0.0.42 linkdown 
+10.0.0.44/31 dev Ethernet88 proto kernel scope link src 10.0.0.44 linkdown 
+10.0.0.46/31 dev Ethernet92 proto kernel scope link src 10.0.0.46 linkdown 
+10.0.0.48/31 dev Ethernet96 proto kernel scope link src 10.0.0.48 linkdown 
+10.0.0.50/31 dev Ethernet100 proto kernel scope link src 10.0.0.50 linkdown 
+10.0.0.52/31 dev Ethernet104 proto kernel scope link src 10.0.0.52 linkdown 
+10.0.0.54/31 dev Ethernet108 proto kernel scope link src 10.0.0.54 linkdown 
+10.0.0.56/31 dev Ethernet112 proto kernel scope link src 10.0.0.56 linkdown 
+10.0.0.58/31 dev Ethernet116 proto kernel scope link src 10.0.0.58 linkdown 
+10.0.0.60/31 dev Ethernet120 proto kernel scope link src 10.0.0.60 linkdown 
+10.0.0.62/31 dev Ethernet124 proto kernel scope link src 10.0.0.62 linkdown 
+192.168.10.0/24 dev eth0 proto kernel scope link src 192.168.10.180 
+200.1.1.0/24 dev Vlan200 proto kernel scope link src 200.1.1.1 
+240.127.1.0/24 dev docker0 proto kernel scope link src 240.127.1.1 linkdown 
+local 10.0.0.2 dev Ethernet4 table local proto kernel scope host src 10.0.0.2 
+local 10.0.0.4 dev Ethernet8 table local proto kernel scope host src 10.0.0.4 
+local 10.0.0.6 dev Ethernet12 table local proto kernel scope host src 10.0.0.6 
+local 10.0.0.8 dev Ethernet16 table local proto kernel scope host src 10.0.0.8 
+local 10.0.0.10 dev Ethernet20 table local proto kernel scope host src 10.0.0.10 
+local 10.0.0.12 dev Ethernet24 table local proto kernel scope host src 10.0.0.12 
+local 10.0.0.14 dev Ethernet28 table local proto kernel scope host src 10.0.0.14 
+local 10.0.0.16 dev Ethernet32 table local proto kernel scope host src 10.0.0.16 
+local 10.0.0.18 dev Ethernet36 table local proto kernel scope host src 10.0.0.18 
+local 10.0.0.20 dev Ethernet40 table local proto kernel scope host src 10.0.0.20 
+local 10.0.0.22 dev Ethernet44 table local proto kernel scope host src 10.0.0.22 
+local 10.0.0.24 dev Ethernet48 table local proto kernel scope host src 10.0.0.24 
+local 10.0.0.26 dev Ethernet52 table local proto kernel scope host src 10.0.0.26 
+local 10.0.0.28 dev Ethernet56 table local proto kernel scope host src 10.0.0.28 
+local 10.0.0.30 dev Ethernet60 table local proto kernel scope host src 10.0.0.30 
+local 10.0.0.32 dev Ethernet64 table local proto kernel scope host src 10.0.0.32 
+local 10.0.0.34 dev Ethernet68 table local proto kernel scope host src 10.0.0.34 
+local 10.0.0.36 dev Ethernet72 table local proto kernel scope host src 10.0.0.36 
+local 10.0.0.38 dev Ethernet76 table local proto kernel scope host src 10.0.0.38 
+local 10.0.0.40 dev Ethernet80 table local proto kernel scope host src 10.0.0.40 
+local 10.0.0.42 dev Ethernet84 table local proto kernel scope host src 10.0.0.42 
+local 10.0.0.44 dev Ethernet88 table local proto kernel scope host src 10.0.0.44 
+local 10.0.0.46 dev Ethernet92 table local proto kernel scope host src 10.0.0.46 
+local 10.0.0.48 dev Ethernet96 table local proto kernel scope host src 10.0.0.48 
+local 10.0.0.50 dev Ethernet100 table local proto kernel scope host src 10.0.0.50 
+local 10.0.0.52 dev Ethernet104 table local proto kernel scope host src 10.0.0.52 
+local 10.0.0.54 dev Ethernet108 table local proto kernel scope host src 10.0.0.54 
+local 10.0.0.56 dev Ethernet112 table local proto kernel scope host src 10.0.0.56 
+local 10.0.0.58 dev Ethernet116 table local proto kernel scope host src 10.0.0.58 
+local 10.0.0.60 dev Ethernet120 table local proto kernel scope host src 10.0.0.60 
+local 10.0.0.62 dev Ethernet124 table local proto kernel scope host src 10.0.0.62 
+local 10.1.0.1 dev Loopback0 table local proto kernel scope host src 10.1.0.1 
+broadcast 127.0.0.0 dev lo table local proto kernel scope link src 127.0.0.1 
+local 127.0.0.0/16 dev lo table local proto kernel scope host src 127.0.0.1 
+local 127.0.0.1 dev lo table local proto kernel scope host src 127.0.0.1 
+broadcast 127.0.255.255 dev lo table local proto kernel scope link src 127.0.0.1 
+broadcast 192.168.10.0 dev eth0 table local proto kernel scope link src 192.168.10.180 
+local 192.168.10.180 dev eth0 table local proto kernel scope host src 192.168.10.180 
+broadcast 192.168.10.255 dev eth0 table local proto kernel scope link src 192.168.10.180 
+broadcast 200.1.1.0 dev Vlan200 table local proto kernel scope link src 200.1.1.1 
+local 200.1.1.1 dev Vlan200 table local proto kernel scope host src 200.1.1.1 
+broadcast 200.1.1.255 dev Vlan200 table local proto kernel scope link src 200.1.1.1 
+broadcast 240.127.1.0 dev docker0 table local proto kernel scope link src 240.127.1.1 linkdown 
+local 240.127.1.1 dev docker0 table local proto kernel scope host src 240.127.1.1 
+broadcast 240.127.1.255 dev docker0 table local proto kernel scope link src 240.127.1.1 linkdown 
+::1 dev lo proto kernel metric 256 pref medium
+fd00::/80 dev docker0 proto kernel metric 256 linkdown pref medium
+fd00::/80 dev docker0 metric 1024 linkdown pref medium
+fe80::/64 dev docker0 proto kernel metric 256 linkdown pref medium
+fe80::/64 dev eth0 proto kernel metric 256 pref medium
+fe80::/64 dev Bridge proto kernel metric 256 pref medium
+fe80::/64 dev Loopback0 proto kernel metric 256 pref medium
+fe80::/64 dev Ethernet0 proto kernel metric 256 pref medium
+fe80::/64 dev Vlan200 proto kernel metric 256 pref medium
+fe80::/64 dev Ethernet4 proto kernel metric 256 pref medium
+fe80::/64 dev Ethernet8 proto kernel metric 256 pref medium
+fe80::/64 dev Ethernet12 proto kernel metric 256 pref medium
+local ::1 dev lo table local proto kernel metric 0 pref medium
+anycast fd00:: dev docker0 table local proto kernel metric 0 pref medium
+local fd00::1 dev docker0 table local proto kernel metric 0 pref medium
+anycast fe80:: dev docker0 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Bridge table local proto kernel metric 0 pref medium
+anycast fe80:: dev Loopback0 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Ethernet0 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Vlan200 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Ethernet4 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Ethernet8 table local proto kernel metric 0 pref medium
+anycast fe80:: dev Ethernet12 table local proto kernel metric 0 pref medium
+local fe80::1 dev docker0 table local proto kernel metric 0 pref medium
+local fe80::61:e6ff:feab:7141 dev Loopback0 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev eth0 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev Ethernet0 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev Vlan200 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev Ethernet4 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev Ethernet8 table local proto kernel metric 0 pref medium
+local fe80::2e0:ecff:fe3b:e606 dev Ethernet12 table local proto kernel metric 0 pref medium
+local fe80::98a2:80ff:febc:d85c dev Bridge table local proto kernel metric 0 pref medium
+multicast ff00::/8 dev eth0 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Bridge table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Loopback0 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Ethernet0 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Vlan200 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Ethernet4 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Ethernet8 table local proto kernel metric 256 pref medium
+multicast ff00::/8 dev Ethernet12 table local proto kernel metric 256 pref medium

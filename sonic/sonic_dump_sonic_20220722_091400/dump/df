@@ -1,0 +1,20 @@
+Filesystem     1K-blocks    Used Available Use% Mounted on
+udev             8167544       0   8167544   0% /dev
+tmpfs            1636944   20868   1616076   2% /run
+root-overlay    11001516 5911480   4508148  57% /
+/dev/sda4       11001516 5911480   4508148  57% /host
+/dev/loop1       4046560  135312   3685152   4% /var/log
+tmpfs            8184720       0   8184720   0% /dev/shm
+tmpfs               5120       0      5120   0% /run/lock
+tmpfs               4096       0      4096   0% /sys/fs/cgroup
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/c3d0859ee7deec39d69552584255ff128793463a1c4d1913e54e7aeb67215fc3/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/2d8c9ea0cd68a2924cb7193188c82c7ff69dc2b51dd590c074b600c4b3655ca3/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/c028395f7e2e515e0df44db616bb91b3013b196aaef181f7417cb3ebaf9b3594/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/2104a8ab563d59f2e81a02a2293d91f389057ce8ab17b97fafbe472e8e8b4efd/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/1e0e56fdb4cc3caebc94c102d56e3f9408b7aecf04772fc3be6905b30b45196e/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/ae33b3209982033c61347d099e37cb5e11d3594ea07e8504cb8d4f951cf64083/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/508c5d007e4b65b7d8d7ddf0654e73cf2053a764493dc07e811cb1bfa973bc4b/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/8ae5976ea2a8ab83b93c464018faba45b3b17ea12ac0fd86051dc7ce87f92c52/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/812009438dcb4538a60bce4197bdd6f83058764fccc2801c8cbd3b83a3e23741/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/4d2e944a208a916a72fcd5990a96906ab83529ba06a0dcee300e144429977794/merged
+overlay         11001516 5911480   4508148  57% /var/lib/docker/overlay2/e11c066e122493e9d2ee4b515855526ad8ff9b3105f4742af23219d3dbc47f63/merged

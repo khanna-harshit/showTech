@@ -1,0 +1,300 @@
+-------------------------------------------------------------------------------
+LLDP statistics:
+-------------------------------------------------------------------------------
+Interface:    eth0
+  Transmitted:  3701
+  Received:     3829
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       2
+  Inserted:     4
+  Deleted:      2
+-------------------------------------------------------------------------------
+Interface:    Ethernet80
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet84
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet88
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet92
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet96
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet100
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet104
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet108
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet16
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet20
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet24
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet28
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet32
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet36
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet40
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet44
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet0
+  Transmitted:  3689
+  Received:     3690
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet4
+  Transmitted:  3690
+  Received:     3688
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet8
+  Transmitted:  3691
+  Received:     3691
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet12
+  Transmitted:  3691
+  Received:     3690
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     1
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet48
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet52
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet56
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet60
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet64
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet68
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet72
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet76
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet112
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet116
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet120
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------
+Interface:    Ethernet124
+  Transmitted:  0
+  Received:     0
+  Discarded:    0
+  Unrecognized: 0
+  Ageout:       0
+  Inserted:     0
+  Deleted:      0
+-------------------------------------------------------------------------------

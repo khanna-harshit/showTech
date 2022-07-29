@@ -1,0 +1,7495 @@
+{ "schemas" : [
+{
+"schema_name": "_acl_tables_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"stage",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"entries",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind types count",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind types",
+	"type"  :"array",
+	"offset":28,
+	"size"  :17,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind count",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind points",
+	"type"  :"number",
+	"offset":56,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"action types count",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"action types",
+	"type"  :"array",
+	"offset":68,
+	"size"  :208,
+	"deflt" :"0"
+},
+{
+	"name"  :"group count",
+	"type"  :"number",
+	"offset":276,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"group",
+	"type"  :"array",
+	"offset":280,
+	"size"  :1028,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifp ipbm classid",
+	"type"  :"number",
+	"offset":1308,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flexctr action",
+	"type"  :"number",
+	"offset":1312,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"police enb",
+	"type"  :"number",
+	"offset":1316,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"color stats",
+	"type"  :"number",
+	"offset":1317,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"priority",
+	"type"  :"number",
+	"offset":1320,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl grp member prio",
+	"type"  :"number",
+	"offset":1324,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sdk group id",
+	"type"  :"number",
+	"offset":1328,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sdk group priority",
+	"type"  :"number",
+	"offset":1332,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count2",
+	"type"  :"number",
+	"offset":1336,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"fp gid",
+	"type"  :"number",
+	"offset":1340,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"del later",
+	"type"  :"number",
+	"offset":1344,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"flexctr size",
+	"type"  :"number",
+	"offset":1348,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifa transit group",
+	"type"  :"number",
+	"offset":1352,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifa flexctr action id",
+	"type"  :"number",
+	"offset":1356,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf group from attr enum",
+	"type"  :"array",
+	"offset":1360,
+	"size"  :256,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_acl_tbl_group_membrs_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"table group",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"table",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"priority",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl table object",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_acl_tbl_grps_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"stage",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl tables",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind types count",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind types",
+	"type"  :"array",
+	"offset":36,
+	"size"  :17,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind count",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipbm classid",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind points",
+	"type"  :"number",
+	"offset":64,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_buf_pools_table_schema",
+"schema_version": "3",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"size",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"xoff thresh",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mode",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rev gport map",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rev cos map",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rev gport map array",
+	"type"  :"array",
+	"offset":36,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"rev cos map array",
+	"type"  :"array",
+	"offset":44,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_buf_profiles_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"pool id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"size",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"shared val",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"xoff thresh",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"xon thresh",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"xon offset thresh",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mode",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pg data",
+	"type"  :"array",
+	"offset":40,
+	"size"  :560,
+	"deflt" :"0"
+},
+{
+	"name"  :"queue data",
+	"type"  :"array",
+	"offset":600,
+	"size"  :560,
+	"deflt" :"0"
+},
+{
+	"name"  :"use qgroup min",
+	"type"  :"number",
+	"offset":1160,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"mcqueue data",
+	"type"  :"array",
+	"offset":1168,
+	"size"  :2240,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_dbg_ctr_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind_type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ctr_type",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port_drop_reason_map",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"stat type",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_ecmp_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"intf",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nhg type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"failover id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh list",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"list end",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_egress_port_group_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"num entries",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trunk_idx",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_global_data_record_schema",
+"schema_version": "2",
+"schema": {
+	"node": [
+{
+	"name"  :"sai ver",
+	"type"  :"number",
+	"offset":0,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"switch inited",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"system mac",
+	"type"  :"array",
+	"offset":9,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr count",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tunnel rif count",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"wred count",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sched count",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"buff prof count",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc qmap count",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dot1p tc map count",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dot1p color map count",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dscp tc map count",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dscp color map count",
+	"type"  :"number",
+	"offset":52,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tc dscp map count",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tc dot1p map count",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tc qmap count",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tc pg map count",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"policer count",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"host intf count",
+	"type"  :"number",
+	"offset":76,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"drop intf id",
+	"type"  :"number",
+	"offset":80,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap intf id",
+	"type"  :"number",
+	"offset":84,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"route nh count",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp nh count",
+	"type"  :"number",
+	"offset":92,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udg groups count",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hash count",
+	"type"  :"number",
+	"offset":100,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf count",
+	"type"  :"number",
+	"offset":104,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf shared 0",
+	"type"  :"number",
+	"offset":108,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf shared 1",
+	"type"  :"number",
+	"offset":112,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap fp group",
+	"type"  :"number",
+	"offset":116,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap groups count",
+	"type"  :"number",
+	"offset":120,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"traps count",
+	"type"  :"number",
+	"offset":124,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"system intf id",
+	"type"  :"number",
+	"offset":128,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"system mac set",
+	"type"  :"number",
+	"offset":132,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl tables count",
+	"type"  :"number",
+	"offset":136,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"host if entry count",
+	"type"  :"number",
+	"offset":140,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl tbl grps count",
+	"type"  :"number",
+	"offset":144,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl tbl grp membrs count",
+	"type"  :"number",
+	"offset":148,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc dld",
+	"type"  :"array",
+	"offset":152,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc dlr",
+	"type"  :"array",
+	"offset":184,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"bridge ports",
+	"type"  :"array",
+	"offset":216,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bridge lag ports",
+	"type"  :"array",
+	"offset":220,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"warm shut",
+	"type"  :"number",
+	"offset":224,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast rule installed",
+	"type"  :"number",
+	"offset":225,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast entry",
+	"type"  :"number",
+	"offset":228,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"arp trap req entry",
+	"type"  :"number",
+	"offset":232,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"arp trap resp entry",
+	"type"  :"number",
+	"offset":236,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nbr with nh count",
+	"type"  :"number",
+	"offset":240,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast ip count",
+	"type"  :"number",
+	"offset":244,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fdb count",
+	"type"  :"number",
+	"offset":248,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egress inuse count",
+	"type"  :"number",
+	"offset":252,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf hash use count",
+	"type"  :"number",
+	"offset":256,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing flex mode id",
+	"type"  :"number",
+	"offset":260,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr flex mode id",
+	"type"  :"number",
+	"offset":264,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"range id",
+	"type"  :"number",
+	"offset":268,
+	"size"  :4,
+	"deflt" :"4294967295"
+},
+{
+	"name"  :"udf qual id",
+	"type"  :"number",
+	"offset":272,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"arp udf qual id",
+	"type"  :"number",
+	"offset":276,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf rdma qual id 1",
+	"type"  :"number",
+	"offset":280,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf rdma qual id 2",
+	"type"  :"number",
+	"offset":284,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"packet format id",
+	"type"  :"number",
+	"offset":288,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"arp packet format id",
+	"type"  :"number",
+	"offset":292,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipv4 packet format id",
+	"type"  :"number",
+	"offset":296,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan udp port",
+	"type"  :"number",
+	"offset":300,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip byte stat en",
+	"type"  :"number",
+	"offset":302,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"mirror policer fp group",
+	"type"  :"number",
+	"offset":304,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"global efp group",
+	"type"  :"number",
+	"offset":308,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"system MAC field entry",
+	"type"  :"number",
+	"offset":312,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nat global enable",
+	"type"  :"number",
+	"offset":316,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"MAC/IP stats field group",
+	"type"  :"number",
+	"offset":320,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sub port rif vfp group",
+	"type"  :"number",
+	"offset":324,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sub port rif ipmc group",
+	"type"  :"number",
+	"offset":328,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"samplepacket count",
+	"type"  :"number",
+	"offset":332,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc_flood fp_gid",
+	"type"  :"number",
+	"offset":336,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc flood fp gid",
+	"type"  :"number",
+	"offset":340,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hostif ifp flexctr id",
+	"type"  :"number",
+	"offset":344,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hostif efp flexctr id",
+	"type"  :"number",
+	"offset":348,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifp stat count",
+	"type"  :"number",
+	"offset":352,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"efp stat count",
+	"type"  :"number",
+	"offset":356,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan ingress flexctr id",
+	"type"  :"number",
+	"offset":360,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan egress flexctr id",
+	"type"  :"number",
+	"offset":364,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pg ing drop flexctr id",
+	"type"  :"number",
+	"offset":368,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pg ing flexctr id",
+	"type"  :"number",
+	"offset":372,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"seed profile id",
+	"type"  :"number",
+	"offset":376,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port routing bcast rule installed",
+	"type"  :"number",
+	"offset":380,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"port routing bcast entry",
+	"type"  :"number",
+	"offset":384,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ucast rule installed",
+	"type"  :"number",
+	"offset":388,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ucast entry",
+	"type"  :"number",
+	"offset":392,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mcast rule installed",
+	"type"  :"number",
+	"offset":396,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"mcast entry",
+	"type"  :"number",
+	"offset":400,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"efp ipv4 stats action id",
+	"type"  :"number",
+	"offset":404,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"efp ipv6 stats action id",
+	"type"  :"number",
+	"offset":408,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"queue egr drop flexctr id",
+	"type"  :"number",
+	"offset":412,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing port group action id",
+	"type"  :"number",
+	"offset":416,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr port group action id",
+	"type"  :"number",
+	"offset":420,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr ecn action id",
+	"type"  :"number",
+	"offset":424,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mirror tc",
+	"type"  :"number",
+	"offset":428,
+	"size"  :1,
+	"deflt" :"255"
+},
+{
+	"name"  :"udf one chunks",
+	"type"  :"array",
+	"offset":432,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf two chunks",
+	"type"  :"array",
+	"offset":448,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp v4 hash id",
+	"type"  :"number",
+	"offset":480,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp v6 hash id",
+	"type"  :"number",
+	"offset":484,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp v4 fd entry",
+	"type"  :"number",
+	"offset":488,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp v6 fd entry",
+	"type"  :"number",
+	"offset":492,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hash profile id",
+	"type"  :"number",
+	"offset":496,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port ing disc flexctr id",
+	"type"  :"number",
+	"offset":500,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mp tnl cmn count",
+	"type"  :"number",
+	"offset":504,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mptnl terminator count",
+	"type"  :"number",
+	"offset":508,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"legacy tnl cmn count",
+	"type"  :"number",
+	"offset":512,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mp tnl map count",
+	"type"  :"number",
+	"offset":516,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"BFD Session Count",
+	"type"  :"number",
+	"offset":520,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"learn policy installed",
+	"type"  :"number",
+	"offset":524,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"isolation_group_field_group",
+	"type"  :"number",
+	"offset":528,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"isolation_groups_count",
+	"type"  :"number",
+	"offset":532,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"isolation_groups_member_count",
+	"type"  :"number",
+	"offset":536,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"snat entry count",
+	"type"  :"number",
+	"offset":540,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dnat entry count",
+	"type"  :"number",
+	"offset":544,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"double nat entry count",
+	"type"  :"number",
+	"offset":548,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"linklocal debug counter sip entry ",
+	"type"  :"number",
+	"offset":552,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"linklocal debug counter dip entry ",
+	"type"  :"number",
+	"offset":554,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"debug counter l3 egress drop",
+	"type"  :"number",
+	"offset":556,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"debug counter group",
+	"type"  :"number",
+	"offset":560,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"sag mac",
+	"type"  :"array",
+	"offset":561,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"mlag gwmac",
+	"type"  :"array",
+	"offset":567,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"sag mac used",
+	"type"  :"number",
+	"offset":573,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf ifa pbm udp",
+	"type"  :"number",
+	"offset":576,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf ifa pbm tcp",
+	"type"  :"number",
+	"offset":580,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan rtr mac",
+	"type"  :"array",
+	"offset":584,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan tunnel term tbl id",
+	"type"  :"number",
+	"offset":592,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap id",
+	"type"  :"number",
+	"offset":596,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap gport",
+	"type"  :"number",
+	"offset":600,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"drop trap id",
+	"type"  :"number",
+	"offset":604,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"drop trap gport",
+	"type"  :"number",
+	"offset":608,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip2me intf id",
+	"type"  :"number",
+	"offset":612,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"default egr vlanport",
+	"type"  :"number",
+	"offset":616,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan fec3 Id",
+	"type"  :"number",
+	"offset":620,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan fec3 ref count",
+	"type"  :"number",
+	"offset":624,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"snoop trap gport",
+	"type"  :"number",
+	"offset":628,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr trap gport",
+	"type"  :"number",
+	"offset":632,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr drop trap gport",
+	"type"  :"number",
+	"offset":636,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr snoop trap gport",
+	"type"  :"number",
+	"offset":640,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf l2 ip4 group context",
+	"type"  :"number",
+	"offset":644,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf ip6 group context",
+	"type"  :"number",
+	"offset":648,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"epmf l2 ip4 group context",
+	"type"  :"number",
+	"offset":652,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"epmf ip6 group context",
+	"type"  :"number",
+	"offset":656,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dot1p default opcode",
+	"type"  :"number",
+	"offset":660,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dscp default opcode",
+	"type"  :"number",
+	"offset":664,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan vrf drop fg context",
+	"type"  :"number",
+	"offset":668,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan vrf drop fg id",
+	"type"  :"number",
+	"offset":672,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"lacp type qual",
+	"type"  :"number",
+	"offset":676,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tagged eth type qual",
+	"type"  :"number",
+	"offset":680,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ether type qual",
+	"type"  :"number",
+	"offset":684,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf1 stat id0 action",
+	"type"  :"number",
+	"offset":688,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf2 stat id0 action",
+	"type"  :"number",
+	"offset":692,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr stat id0 action",
+	"type"  :"number",
+	"offset":696,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf1 color cascade base action",
+	"type"  :"number",
+	"offset":700,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf2 color cascade base action",
+	"type"  :"number",
+	"offset":704,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf1 color cascade data action",
+	"type"  :"number",
+	"offset":708,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmf2 color cascade data action",
+	"type"  :"number",
+	"offset":712,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sflow group",
+	"type"  :"number",
+	"offset":716,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sflow policy count",
+	"type"  :"number",
+	"offset":720,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan vrf drop policy count",
+	"type"  :"number",
+	"offset":724,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp hash ipv4",
+	"type"  :"number",
+	"offset":728,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp hash ipv6",
+	"type"  :"number",
+	"offset":736,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"used range count",
+	"type"  :"number",
+	"offset":744,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"def dscp tc map oid",
+	"type"  :"number",
+	"offset":752,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan non tt drop entry",
+	"type"  :"number",
+	"offset":760,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port bitmap profile qual",
+	"type"  :"number",
+	"offset":764,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip2me subnet intf id",
+	"type"  :"number",
+	"offset":768,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mtu error trap id",
+	"type"  :"number",
+	"offset":772,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr drop trap id",
+	"type"  :"number",
+	"offset":776,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"switch type",
+	"type"  :"number",
+	"offset":780,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"voq max cores",
+	"type"  :"number",
+	"offset":784,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fdb uc miss trap id",
+	"type"  :"number",
+	"offset":788,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fdb mc miss trap id",
+	"type"  :"number",
+	"offset":792,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fdb bc miss trap id",
+	"type"  :"number",
+	"offset":796,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr ecn qos map id",
+	"type"  :"number",
+	"offset":800,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"debug counter sa da drop",
+	"type"  :"array",
+	"offset":804,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"tcp flex hash eid",
+	"type"  :"number",
+	"offset":820,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udp flex hash eid",
+	"type"  :"number",
+	"offset":824,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"use ecn thresholds for ect",
+	"type"  :"number",
+	"offset":828,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"port egress queue flexctr id",
+	"type"  :"number",
+	"offset":832,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port egress ipbyte flexctr id",
+	"type"  :"number",
+	"offset":844,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"cpu port egress queue flexctr id",
+	"type"  :"number",
+	"offset":836,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr queue ecn action id",
+	"type"  :"number",
+	"offset":840,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"subport l2 drop entry",
+	"type"  :"number",
+	"offset":848,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"drop mcgroup",
+	"type"  :"number",
+	"offset":852,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rcy pbmp",
+	"type"  :"array",
+	"offset":856,
+	"size"  :48,
+	"deflt" :"0"
+},
+{
+	"name"  :"tnl loopback vfp group",
+	"type"  :"array",
+	"offset":904,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 sag vlan system mac drop entry",
+	"type"  :"number",
+	"offset":908,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 mlag gwmac vlan system mac drop entry",
+	"type"  :"number",
+	"offset":912,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"non mlag vlan mlag mac drop entry",
+	"type"  :"number",
+	"offset":916,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 pkt l2 vlan drop entry",
+	"type"  :"number",
+	"offset":920,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 pkt ipv4 hdr err drop entry",
+	"type"  :"number",
+	"offset":924,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 pkt ipv6 hdr err drop entry",
+	"type"  :"number",
+	"offset":928,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tnl decap std ecn map",
+	"type"  :"array",
+	"offset":932,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tnl decap copy ecn map",
+	"type"  :"array",
+	"offset":936,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"last allocated fp pri",
+	"type"  :"number",
+	"offset":940,
+	"size"  :4,
+	"deflt" :"3"
+},
+{
+	"name"  :"switch events count",
+	"type"  :"number",
+	"offset":944,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"switch events",
+	"type"  :"array",
+	"offset":948,
+	"size"  :64,
+	"deflt" :"0"
+},
+{
+	"name"  :"bridge l2stn entries",
+	"type"  :"number",
+	"offset":1012,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"macsec egr pmf group",
+	"type"  :"number",
+	"offset":1016,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"macsec ace format id",
+	"type"  :"number",
+	"offset":1020,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"macsec ing pmf group",
+	"type"  :"number",
+	"offset":1024,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing bypass group",
+	"type"  :"number",
+	"offset":1028,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dfp per port flexctr id",
+	"type"  :"number",
+	"offset":1032,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif stats l3 egr id",
+	"type"  :"number",
+	"offset":1036,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing rif ctr mode id",
+	"type"  :"number",
+	"offset":1040,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"misc fp group",
+	"type"  :"number",
+	"offset":1044,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl any dbg ctr oid",
+	"type"  :"number",
+	"offset":1048,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_gport_1_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"gport",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_gport_2_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"gport",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_hash_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"hash field count",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hash fields",
+	"type"  :"array",
+	"offset":12,
+	"size"  :128,
+	"deflt" :"0"
+},
+{
+	"name"  :"flex digest entry count",
+	"type"  :"number",
+	"offset":140,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flex digest entries",
+	"type"  :"array",
+	"offset":144,
+	"size"  :24,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipv4 hash field chunk count",
+	"type"  :"number",
+	"offset":168,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipv6 hash field chunk count",
+	"type"  :"number",
+	"offset":172,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_hostif_filter_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dest type",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"match flags",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"match ing port",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"match fp rule",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_hostif_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"hostif type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"status",
+	"type"  :"number",
+	"offset":12,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan_rif",
+	"type"  :"number",
+	"offset":13,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"lag",
+	"type"  :"number",
+	"offset":14,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"tag mode",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hostif name",
+	"type"  :"array",
+	"offset":32,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"genet mcgrp",
+	"type"  :"array",
+	"offset":48,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"if obj",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"id",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mac",
+	"type"  :"array",
+	"offset":76,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan",
+	"type"  :"number",
+	"offset":82,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"port",
+	"type"  :"number",
+	"offset":84,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"cosq",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"name",
+	"type"  :"array",
+	"offset":92,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"user data",
+	"type"  :"number",
+	"offset":108,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_hostif_trap_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"entry_type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"if object",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap object",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"host object",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"channel type",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_ip_pg_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"IPPG obj",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_ipmc_group_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"gid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif_id",
+	"type"  :"array",
+	"offset":12,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"mem count",
+	"type"  :"number",
+	"offset":524,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_iso_group_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"group_type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mem_count",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mem_list",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind_count",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bind_list",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_iso_group_member_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"grp_idx",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_l2mc_group_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"l2mc grp map idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc gid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif id",
+	"type"  :"array",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user type",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mem count",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_l2mc_lag_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"object_list",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"list_head",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_lag_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif object",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"act vid",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"internal",
+	"type"  :"number",
+	"offset":24,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast ip",
+	"type"  :"number",
+	"offset":25,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":26,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"addr family",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6",
+	"type"  :"array",
+	"offset":40,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif_id",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl bind count",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl bind list tail",
+	"type"  :"number",
+	"offset":64,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl bind list head",
+	"type"  :"number",
+	"offset":72,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"egress port group id",
+	"type"  :"number",
+	"offset":80,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifp ipbm classid",
+	"type"  :"number",
+	"offset":84,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl redirect opaque id",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"lag label",
+	"type"  :"array",
+	"offset":92,
+	"size"  :32,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_mac_nbr_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"mac",
+	"type"  :"array",
+	"offset":0,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nbrs count",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nbrs list",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"nbrs end",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_mirror_sessions_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dest id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mtp gport",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"src mac",
+	"type"  :"array",
+	"offset":20,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst mac",
+	"type"  :"array",
+	"offset":26,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"tpid",
+	"type"  :"number",
+	"offset":32,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan_id",
+	"type"  :"number",
+	"offset":34,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"version",
+	"type"  :"number",
+	"offset":36,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"tos",
+	"type"  :"number",
+	"offset":37,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ttl",
+	"type"  :"number",
+	"offset":38,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"src addr",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst addr",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"src6 addr",
+	"type"  :"array",
+	"offset":48,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst6 addr",
+	"type"  :"array",
+	"offset":64,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"gre protocol",
+	"type"  :"number",
+	"offset":80,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"policer",
+	"type"  :"number",
+	"offset":88,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"mirror class id",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"efp entry",
+	"type"  :"number",
+	"offset":100,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sample rate",
+	"type"  :"number",
+	"offset":104,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udp src port",
+	"type"  :"number",
+	"offset":112,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"udp dst port",
+	"type"  :"number",
+	"offset":114,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"rcy port",
+	"type"  :"number",
+	"offset":116,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"remote sysport",
+	"type"  :"number",
+	"offset":120,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_mlag_isl_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"bridge port id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"create setting",
+	"type"  :"number",
+	"offset":16,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"num create",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"num delete",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"num set",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"num reset",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_nat_entry_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"nat type",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"src ip",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst ip",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"proto",
+	"type"  :"number",
+	"offset":12,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"l4 src port",
+	"type"  :"number",
+	"offset":14,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"l4 dst port",
+	"type"  :"number",
+	"offset":16,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"src ip mask",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst ip mask",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"proto mask",
+	"type"  :"number",
+	"offset":28,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"l4 src port mask",
+	"type"  :"number",
+	"offset":30,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"l4 dst port mask",
+	"type"  :"number",
+	"offset":32,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"nat id",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing flags",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip addr",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vrf",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l4 port",
+	"type"  :"number",
+	"offset":52,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip proto",
+	"type"  :"number",
+	"offset":54,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr flags",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sip addr",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sip addr mask",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"src port",
+	"type"  :"number",
+	"offset":68,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"dip addr",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dip addr mask",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst port",
+	"type"  :"number",
+	"offset":80,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"pkt cnt enabled",
+	"type"  :"number",
+	"offset":82,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"byte cnt enabled",
+	"type"  :"number",
+	"offset":83,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"stat id",
+	"type"  :"number",
+	"offset":84,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_nbr_id_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_nbr_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"addr family",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6",
+	"type"  :"array",
+	"offset":12,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif_id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pkt act",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh count",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh list",
+	"type"  :"number",
+	"offset":48,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh end",
+	"type"  :"number",
+	"offset":56,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast ip",
+	"type"  :"number",
+	"offset":64,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fp entry",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mac",
+	"type"  :"array",
+	"offset":80,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"if id",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"noroute",
+	"type"  :"number",
+	"offset":92,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"port_tgid",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mcast group",
+	"type"  :"number",
+	"offset":100,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"eobj count",
+	"type"  :"number",
+	"offset":104,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egress objects",
+	"type"  :"number",
+	"offset":112,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"egress objects end",
+	"type"  :"number",
+	"offset":120,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc encap",
+	"type"  :"number",
+	"offset":128,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc egr id",
+	"type"  :"number",
+	"offset":132,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_netif_genetlink_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"netif id",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filters",
+	"type"  :"array",
+	"offset":6,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"num filters",
+	"type"  :"number",
+	"offset":38,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filter ids",
+	"type"  :"array",
+	"offset":40,
+	"size"  :64,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_netif_lag_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"netif id",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filters",
+	"type"  :"array",
+	"offset":6,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"num filters",
+	"type"  :"number",
+	"offset":38,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filter ids",
+	"type"  :"array",
+	"offset":40,
+	"size"  :64,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_netif_port_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"netif id",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filters",
+	"type"  :"array",
+	"offset":6,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"num filters",
+	"type"  :"number",
+	"offset":38,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filter ids",
+	"type"  :"array",
+	"offset":40,
+	"size"  :64,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_netif_vlan_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"netif id",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filters",
+	"type"  :"array",
+	"offset":6,
+	"size"  :32,
+	"deflt" :"0"
+},
+{
+	"name"  :"num filters",
+	"type"  :"number",
+	"offset":38,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"filter ids",
+	"type"  :"array",
+	"offset":40,
+	"size"  :64,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_nh_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"act type",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"type state",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"if id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"if overlay id",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"intf type",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif obj",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"tid obj",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"seq id",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"addr family",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4",
+	"type"  :"number",
+	"offset":52,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6",
+	"type"  :"array",
+	"offset":56,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif_id",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst tnl id",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_nh_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"nhid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"fwd count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp count",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nhg mem exists in hw",
+	"type"  :"number",
+	"offset":12,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp list",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecmp end",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"redirect entry count",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"redirect entry list",
+	"type"  :"number",
+	"offset":40,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_pool_count_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_port_buff_prof_applied_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"prof applied",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_port_class_id_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"included pbmp",
+	"type"  :"array",
+	"offset":8,
+	"size"  :48,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref cnt",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_port_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"active",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"1"
+},
+{
+	"name"  :"bdg port",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"wred",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc q map",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trunk",
+	"type"  :"number",
+	"offset":20,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"trunk mbr in hw",
+	"type"  :"number",
+	"offset":21,
+	"size"  :1,
+	"deflt" :"1"
+},
+{
+	"name"  :"trunk mbr flags",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tid",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sched id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bdg port admin state",
+	"type"  :"number",
+	"offset":40,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"learn flags",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing_map",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr_map",
+	"type"  :"number",
+	"offset":52,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing_ctr",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr_ctr",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ingress mirror sessions",
+	"type"  :"array",
+	"offset":64,
+	"size"  :12,
+	"deflt" :"0"
+},
+{
+	"name"  :"egress mirror sessions",
+	"type"  :"array",
+	"offset":76,
+	"size"  :12,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip stat id",
+	"type"  :"array",
+	"offset":88,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip entry id",
+	"type"  :"array",
+	"offset":104,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc mode",
+	"type"  :"number",
+	"offset":120,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc tx",
+	"type"  :"number",
+	"offset":124,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"pfc rx",
+	"type"  :"number",
+	"offset":125,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"samplepacket id",
+	"type"  :"number",
+	"offset":128,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"iso grp attr",
+	"type"  :"number",
+	"offset":136,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"br iso grp attr",
+	"type"  :"number",
+	"offset":144,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"br iso grp cnt",
+	"type"  :"number",
+	"offset":152,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mlag isl",
+	"type"  :"number",
+	"offset":156,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl bind obj",
+	"type"  :"number",
+	"offset":160,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr acl bind obj",
+	"type"  :"number",
+	"offset":168,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"ifp ipbm classid",
+	"type"  :"number",
+	"offset":176,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dbg ctr l3 egress entry id",
+	"type"  :"number",
+	"offset":180,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"PG buffer profile id",
+	"type"  :"array",
+	"offset":184,
+	"size"  :64,
+	"deflt" :"0"
+},
+{
+	"name"  :"port init speed",
+	"type"  :"number",
+	"offset":248,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"media type",
+	"type"  :"number",
+	"offset":252,
+	"size"  :4,
+	"deflt" :"1"
+},
+{
+	"name"  :"queue sched id",
+	"type"  :"array",
+	"offset":256,
+	"size"  :192,
+	"deflt" :"0"
+},
+{
+	"name"  :"port serdes removed",
+	"type"  :"number",
+	"offset":448,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"cpu stat id",
+	"type"  :"array",
+	"offset":452,
+	"size"  :192,
+	"deflt" :"0"
+},
+{
+	"name"  :"cpu entry id",
+	"type"  :"array",
+	"offset":644,
+	"size"  :192,
+	"deflt" :"0"
+},
+{
+	"name"  :"port qos dscp to tc map",
+	"type"  :"number",
+	"offset":840,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"port qos tc to queue map",
+	"type"  :"number",
+	"offset":848,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"macsec egr acl bind obj",
+	"type"  :"number",
+	"offset":856,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"macsec ing acl bind obj",
+	"type"  :"number",
+	"offset":864,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"ud trap",
+	"type"  :"number",
+	"offset":872,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing bypass entry id",
+	"type"  :"number",
+	"offset":876,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port rx lane squelch",
+	"type"  :"number",
+	"offset":880,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"svtag def lif",
+	"type"  :"number",
+	"offset":884,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"svtag def lif ref cnt",
+	"type"  :"number",
+	"offset":888,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"admin state",
+	"type"  :"number",
+	"offset":892,
+	"size"  :1,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_port_qid_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"qoid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"parent sched",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"wred obj",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"sched obj",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"buffer obj",
+	"type"  :"number",
+	"offset":40,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_port_rif_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif object",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_qos_egress_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"count",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"map",
+	"type"  :"array",
+	"offset":12,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"in use",
+	"type"  :"number",
+	"offset":524,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"qos map id",
+	"type"  :"array",
+	"offset":528,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"in use pbmp",
+	"type"  :"array",
+	"offset":532,
+	"size"  :48,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_qos_ingress_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"count",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"map",
+	"type"  :"array",
+	"offset":12,
+	"size"  :2048,
+	"deflt" :"0"
+},
+{
+	"name"  :"qos map id",
+	"type"  :"array",
+	"offset":2060,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"in use",
+	"type"  :"number",
+	"offset":2064,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_queue_wred_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx1",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"idx2",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"wred",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_rif_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"index",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"is virtual",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vlan obj",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"1"
+},
+{
+	"name"  :"station id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"underlay stn id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"neighbor miss action",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 mtu",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh count",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nhs entries",
+	"type"  :"number",
+	"offset":48,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap valid",
+	"type"  :"number",
+	"offset":56,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap id",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"reference count",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"multicast egress obj id",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 iif cnt id",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif mac",
+	"type"  :"array",
+	"offset":80,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif type",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl ref count",
+	"type"  :"number",
+	"offset":92,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"peer mac station id",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"l3 iif egr cnt id",
+	"type"  :"number",
+	"offset":100,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr flex cnt ref count",
+	"type"  :"number",
+	"offset":104,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"peer mac",
+	"type"  :"array",
+	"offset":108,
+	"size"  :6,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_rif_tunnel_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"index",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"station id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_route_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"addr family",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4m",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6",
+	"type"  :"array",
+	"offset":16,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6m",
+	"type"  :"array",
+	"offset":32,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh obj",
+	"type"  :"number",
+	"offset":48,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"pkt act",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nhid",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":64,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"multipath",
+	"type"  :"number",
+	"offset":65,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip2me",
+	"type"  :"number",
+	"offset":66,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"state",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"meta cid",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_rpf_group_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"gid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mem count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"rpf member rif id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_sag_mlag_info_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"is lag",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"value",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v4 entry id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 entry id",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v4 drop entry id",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 drop entry id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 na entry id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 drop na entry id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tcp entry id",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tcp drop entry id",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"icl nh id",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"icl intf id",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v4 untag entry id",
+	"type"  :"number",
+	"offset":52,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 untag entry id",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"v6 na untag entry id",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tcp untag entry id",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"snoop trap id",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_samplepacket_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"sampling type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sampling mode",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sampling rate",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"table id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"profile id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_scheduler_group_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"port",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"level",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"index",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"scheduler oid",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"parent oid",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_scheduler_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"algorithm",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"weight",
+	"type"  :"number",
+	"offset":12,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"shaper type",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"minimum bandwidth",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"minimum burst",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"maximum bandwidth",
+	"type"  :"number",
+	"offset":40,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"maximum burst",
+	"type"  :"number",
+	"offset":48,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"table id",
+	"type"  :"number",
+	"offset":60,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_stp_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref_cnt",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"object_list",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"object_end",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_sub_port_rif_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"port",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"is lag",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif object",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"vpn id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"vp vfp ip",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr_obj",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"underlay if",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"in lif",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"out lif",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tnl_map_entry_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"key",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"val",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tunnel_map",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vpn",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tnl_net_vpn_entry_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"src_ip",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dst_ip",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udp_dp",
+	"type"  :"number",
+	"offset":12,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"bc_group",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vpn_id",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vni",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"init_id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"term_id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"init_id_mc",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"term_id_mc",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref_count",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nr_net_ports",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"net_ports",
+	"type"  :"array",
+	"offset":52,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"net_egr_obj",
+	"type"  :"array",
+	"offset":564,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan_port",
+	"type"  :"array",
+	"offset":1076,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"l2_station_id",
+	"type"  :"array",
+	"offset":1588,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"net_egr_obj_mc",
+	"type"  :"array",
+	"offset":2100,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"vxlan_port_mc",
+	"type"  :"array",
+	"offset":2612,
+	"size"  :512,
+	"deflt" :"0"
+},
+{
+	"name"  :"l2_station_id_mc",
+	"type"  :"array",
+	"offset":3124,
+	"size"  :512,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_trap_groups_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"state",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"queue num",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"policer",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl stat id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flextr action id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"traps",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_traps_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"installed",
+	"type"  :"number",
+	"offset":5,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pkt action",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"priority",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"trap group",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"group",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"entry count",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"entry array",
+	"type"  :"array",
+	"offset":40,
+	"size"  :20,
+	"deflt" :"0"
+},
+{
+	"name"  :"exclude list",
+	"type"  :"array",
+	"offset":60,
+	"size"  :48,
+	"deflt" :"0"
+},
+{
+	"name"  :"port class",
+	"type"  :"number",
+	"offset":108,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def snoop trap",
+	"type"  :"number",
+	"offset":112,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def trap",
+	"type"  :"number",
+	"offset":116,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def snoop filter id",
+	"type"  :"number",
+	"offset":120,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def trap filter id",
+	"type"  :"number",
+	"offset":124,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def entry count",
+	"type"  :"number",
+	"offset":128,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user def entry list",
+	"type"  :"array",
+	"offset":136,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":144,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tt_unicast_arp_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"mac",
+	"type"  :"array",
+	"offset":0,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"entry id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"system mac",
+	"type"  :"number",
+	"offset":12,
+	"size"  :1,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tunnel_info_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"index",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap ttl mode",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap ttl",
+	"type"  :"number",
+	"offset":16,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"decap ttl mode",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap dscp mode",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap dscp",
+	"type"  :"number",
+	"offset":28,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"decap dscp mode",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ecn",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip addr family",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip addr",
+	"type"  :"array",
+	"offset":44,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh ip addr family",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"nh ip addr",
+	"type"  :"array",
+	"offset":64,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"underlay if",
+	"type"  :"number",
+	"offset":80,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"overlay if",
+	"type"  :"number",
+	"offset":88,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"intf",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"encap map",
+	"type"  :"number",
+	"offset":104,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"decap map",
+	"type"  :"number",
+	"offset":112,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"term obj",
+	"type"  :"number",
+	"offset":120,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"hw tunnel id",
+	"type"  :"number",
+	"offset":128,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"in use",
+	"type"  :"number",
+	"offset":132,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tunnel_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tunnel_idx",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_tunnel_table_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"tid",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"tunnel type",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dip addr family",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"dip addr",
+	"type"  :"array",
+	"offset":24,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"tunnel_term_entry_type",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sip addr family",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sip addr",
+	"type"  :"array",
+	"offset":48,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"hw tunnel id",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"hw tunnel id 2",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_udfg_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"length",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"table id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"hash id",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"udf id",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_unicast_arp_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"mac",
+	"type"  :"array",
+	"offset":0,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"entry id",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"system mac",
+	"type"  :"number",
+	"offset":20,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"num entries",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"1"
+}
+	]
+}
+}
+,{
+"schema_name": "_vfi_reservation_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"key",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"user",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_bmp_record_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"bmp",
+	"type"  :"array",
+	"offset":0,
+	"size"  :512,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_membrs_table_schema",
+"schema_version": "2",
+"schema": {
+	"node": [
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"member count",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"members end",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"members",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"acl bind obj",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr acl bind obj",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast flood ctrl fp entry id",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_rif_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif object",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc rif",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mc rt enable",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ipmc enabled",
+	"type"  :"number",
+	"offset":24,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"l2mc enabled",
+	"type"  :"number",
+	"offset":25,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"uderlay if",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"sub int cnt",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"bcast ip",
+	"type"  :"number",
+	"offset":36,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"addr family",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip4",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ip6",
+	"type"  :"array",
+	"offset":52,
+	"size"  :16,
+	"deflt" :"0"
+},
+{
+	"name"  :"rif_id",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_stg_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"key",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"stg id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_vfi_table_schema",
+"schema_version": "3",
+"schema": {
+	"node": [
+{
+	"name"  :"key",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":6,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"vfi",
+	"type"  :"number",
+	"offset":8,
+	"size"  :2,
+	"deflt" :"0"
+},
+{
+	"name"  :"vni",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"mcg",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"user",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ing stat id",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"egr stat id",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vni_vlan_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"idx",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vrf_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"vr id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vr mac",
+	"type"  :"array",
+	"offset":4,
+	"size"  :6,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_wred_prof_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"index",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"valid",
+	"type"  :"number",
+	"offset":4,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green flags",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green min thresh",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green max thresh",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green drop prob",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green gain",
+	"type"  :"number",
+	"offset":24,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green ecn thresh",
+	"type"  :"number",
+	"offset":28,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green refresh time",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green use queue group",
+	"type"  :"number",
+	"offset":36,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green profile id",
+	"type"  :"number",
+	"offset":40,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green et",
+	"type"  :"number",
+	"offset":44,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard green rt",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow flags",
+	"type"  :"number",
+	"offset":52,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow min thresh",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow max thresh",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow drop prob",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow gain",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow ecn thresh",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow refresh time",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow use queue group",
+	"type"  :"number",
+	"offset":80,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow profile id",
+	"type"  :"number",
+	"offset":84,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow et",
+	"type"  :"number",
+	"offset":88,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard yellow rt",
+	"type"  :"number",
+	"offset":92,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red flags",
+	"type"  :"number",
+	"offset":96,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red min thresh",
+	"type"  :"number",
+	"offset":100,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red max thresh",
+	"type"  :"number",
+	"offset":104,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red drop prob",
+	"type"  :"number",
+	"offset":108,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red gain",
+	"type"  :"number",
+	"offset":112,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red ecn thresh",
+	"type"  :"number",
+	"offset":116,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red refresh time",
+	"type"  :"number",
+	"offset":120,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red use queue group",
+	"type"  :"number",
+	"offset":124,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red profile id",
+	"type"  :"number",
+	"offset":128,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red et",
+	"type"  :"number",
+	"offset":132,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard red rt",
+	"type"  :"number",
+	"offset":136,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green flags",
+	"type"  :"number",
+	"offset":140,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green min thresh",
+	"type"  :"number",
+	"offset":144,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green max thresh",
+	"type"  :"number",
+	"offset":148,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green drop prob",
+	"type"  :"number",
+	"offset":152,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green gain",
+	"type"  :"number",
+	"offset":156,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green ecn thresh",
+	"type"  :"number",
+	"offset":160,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green refresh time",
+	"type"  :"number",
+	"offset":164,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green use queue group",
+	"type"  :"number",
+	"offset":168,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green profile id",
+	"type"  :"number",
+	"offset":172,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green et",
+	"type"  :"number",
+	"offset":176,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard green rt",
+	"type"  :"number",
+	"offset":180,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow flags",
+	"type"  :"number",
+	"offset":184,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow min thresh",
+	"type"  :"number",
+	"offset":188,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow max thresh",
+	"type"  :"number",
+	"offset":192,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow drop prob",
+	"type"  :"number",
+	"offset":196,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow gain",
+	"type"  :"number",
+	"offset":200,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow ecn thresh",
+	"type"  :"number",
+	"offset":204,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow refresh time",
+	"type"  :"number",
+	"offset":208,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow use queue group",
+	"type"  :"number",
+	"offset":212,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow profile id",
+	"type"  :"number",
+	"offset":216,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow et",
+	"type"  :"number",
+	"offset":220,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard yellow rt",
+	"type"  :"number",
+	"offset":224,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red flags",
+	"type"  :"number",
+	"offset":228,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red min thresh",
+	"type"  :"number",
+	"offset":232,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red max thresh",
+	"type"  :"number",
+	"offset":236,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red drop prob",
+	"type"  :"number",
+	"offset":240,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red gain",
+	"type"  :"number",
+	"offset":244,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red ecn thresh",
+	"type"  :"number",
+	"offset":248,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red refresh time",
+	"type"  :"number",
+	"offset":252,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red use queue group",
+	"type"  :"number",
+	"offset":256,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red profile id",
+	"type"  :"number",
+	"offset":260,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red et",
+	"type"  :"number",
+	"offset":264,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ECN discard red rt",
+	"type"  :"number",
+	"offset":268,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard ect",
+	"type"  :"number",
+	"offset":272,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"discard gn",
+	"type"  :"number",
+	"offset":276,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"port data",
+	"type"  :"array",
+	"offset":280,
+	"size"  :560,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_policer_action_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"pol id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"gpa",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ypa",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"rpa",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"ref count",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"oids",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"stat ref count",
+	"type"  :"number",
+	"offset":32,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"stats",
+	"type"  :"number",
+	"offset":40,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":48,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"flags",
+	"type"  :"number",
+	"offset":56,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"policer mode",
+	"type"  :"number",
+	"offset":60,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"cir",
+	"type"  :"number",
+	"offset":64,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"cbs",
+	"type"  :"number",
+	"offset":68,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pir",
+	"type"  :"number",
+	"offset":72,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"pbs",
+	"type"  :"number",
+	"offset":76,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"stage",
+	"type"  :"number",
+	"offset":80,
+	"size"  :4,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_policer_stat_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"stat id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"flexctr action id",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_policer_oid_map_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"oid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_stp_port_obj_list_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"object_id",
+	"type"  :"number",
+	"offset":0,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"stp_state",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":16,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_vlan_membrs_list_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"type",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"val",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acc_intf_id",
+	"type"  :"number",
+	"offset":8,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acc_egr_obj",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acc_vxlan_port",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"acc_encap_id",
+	"type"  :"number",
+	"offset":20,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_bridge_lag_ports_list_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"oid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"bridge port state",
+	"type"  :"number",
+	"offset":8,
+	"size"  :1,
+	"deflt" :"0"
+},
+{
+	"name"  :"learn flags",
+	"type"  :"number",
+	"offset":12,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid count",
+	"type"  :"number",
+	"offset":16,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"vid list",
+	"type"  :"number",
+	"offset":24,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":32,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"iso grp attr",
+	"type"  :"number",
+	"offset":40,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"iso grp cnt",
+	"type"  :"number",
+	"offset":48,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"iso grps list",
+	"type"  :"number",
+	"offset":56,
+	"size"  :8,
+	"deflt" :"0"
+},
+{
+	"name"  :"mlag isl",
+	"type"  :"number",
+	"offset":64,
+	"size"  :1,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_lag_bp_vlan_list_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"vid",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"utag",
+	"type"  :"number",
+	"offset":4,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+,{
+"schema_name": "_trap_refs_table_schema",
+"schema_version": "1",
+"schema": {
+	"node": [
+{
+	"name"  :"trap",
+	"type"  :"number",
+	"offset":0,
+	"size"  :4,
+	"deflt" :"0"
+},
+{
+	"name"  :"next",
+	"type"  :"number",
+	"offset":8,
+	"size"  :8,
+	"deflt" :"0"
+}
+	]
+}
+}
+]}

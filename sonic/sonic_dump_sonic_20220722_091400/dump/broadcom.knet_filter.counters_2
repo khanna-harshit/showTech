@@ -1,0 +1,77 @@
+Device stats (unit 0):
+  Interrupts      164597
+  Tx packets      168150
+  Rx0 packets     116879
+  Rx1 packets          0
+  Rx2 packets          0
+  Rx0 pkts/intr        0
+  Rx1 pkts/intr        0
+  Rx2 pkts/intr        0
+  Timer runs           0
+  NAPI reruns          0
+  Filter 33 stats:
+    Hits               0
+  Filter 1 stats:
+    Hits               0
+  Filter 2 stats:
+    Hits               0
+  Filter 3 stats:
+    Hits               0
+  Filter 4 stats:
+    Hits               0
+  Filter 5 stats:
+    Hits               0
+  Filter 6 stats:
+    Hits               0
+  Filter 7 stats:
+    Hits               0
+  Filter 8 stats:
+    Hits               0
+  Filter 9 stats:
+    Hits               0
+  Filter 10 stats:
+    Hits               0
+  Filter 11 stats:
+    Hits               0
+  Filter 12 stats:
+    Hits               0
+  Filter 13 stats:
+    Hits               0
+  Filter 14 stats:
+    Hits               0
+  Filter 15 stats:
+    Hits               0
+  Filter 16 stats:
+    Hits               0
+  Filter 18 stats:
+    Hits            3690
+  Filter 19 stats:
+    Hits           54755
+  Filter 20 stats:
+    Hits           54743
+  Filter 21 stats:
+    Hits               0
+  Filter 22 stats:
+    Hits               0
+  Filter 23 stats:
+    Hits               0
+  Filter 24 stats:
+    Hits               0
+  Filter 25 stats:
+    Hits               0
+  Filter 26 stats:
+    Hits               0
+  Filter 27 stats:
+    Hits               0
+  Filter 28 stats:
+    Hits               0
+  Filter 29 stats:
+    Hits               0
+  Filter 30 stats:
+    Hits               0
+  Filter 31 stats:
+    Hits               0
+  Filter 32 stats:
+    Hits               0
+  Filter 17 stats:
+    Hits            3691

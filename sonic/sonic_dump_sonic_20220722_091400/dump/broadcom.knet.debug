@@ -1,0 +1,45 @@
+Configuration:
+  debug:          0x5020
+  mac_addr:       02:10:18:e4:f4:1f
+  rx_buffer_size: 9238 (0x2416)
+  rcpu_mode:      0
+  rcpu_dmac:      00:00:00:00:00:00
+  rcpu_smac:      00:00:00:00:00:00
+  rcpu_ethertype: 0xde08
+  rcpu_signature: 0x0
+  rcpu_vlan:      1
+  use_rx_skb:     1
+  num_rx_prio:    1
+  check_rcpu_sig: 0
+  default_mtu:    9100
+  rx_sync_retry:  1000
+  use_napi:       0
+  napi_weight:    64
+  basedev_susp:   0
+  force_tagged:   1
+  ft_tpid:        33024
+  ft_pri:         0
+  ft_pri:         0
+  ft_tpid:        0
+Active IOCTLs:
+  Command:        0
+  Event:          1
+Device 0:
+  base_addr:      0x000000007d7c8727
+  dev_no:         0
+  cmic_type:      m
+  dcb_type:       32
+  dcb_wsize:      16
+  pkt_hdr_size:   0
+  rx_chans:       3
+  cdma_chans:     0x0
+  unet_chans:     0x0
+  irq_mask:       0x3f00
+  dma_events:     0x0
+  dcb_dma:        0x00000000c4a9612a
+  dcb_mem_size:   0x4100
+  rcpu_sig:       0xb960
+  napi_poll_mode: 0
+  inst_id:        0xffffffff
+  evt_queue:      0
+  oamp_port_num:  0 {0, 0, 0, 0}

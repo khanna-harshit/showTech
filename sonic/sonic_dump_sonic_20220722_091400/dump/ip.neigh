@@ -1,0 +1,14 @@
+10.0.0.7 dev Ethernet12  FAILED
+10.0.0.5 dev Ethernet8  INCOMPLETE
+10.0.0.3 dev Ethernet4  INCOMPLETE
+192.168.10.1 dev eth0 lladdr a8:0c:0d:90:ec:58 REACHABLE
+fe80::6839:90ff:fe41:1c8 dev eth0 lladdr 6a:39:90:41:01:c8 STALE
+fe80::6c59:12ff:feda:91a5 dev eth0 lladdr 6e:59:12:da:91:a5 STALE
+fe80::f4c5:90ff:fe5f:635 dev eth0 lladdr f6:c5:90:5f:06:35 STALE
+fe80::3cdf:2fff:fe99:60a dev eth0 lladdr 3e:df:2f:99:06:0a STALE
+fe80::702b:9ff:febf:369d dev eth0 lladdr 72:2b:09:bf:36:9d STALE
+fe80::141b:66ff:fe40:125 dev eth0 lladdr 16:1b:66:40:01:25 STALE
+fe80::5ca2:daff:fe5f:a805 dev eth0 lladdr 5e:a2:da:5f:a8:05 STALE
+fe80::a887:feff:fef7:fb09 dev eth0 lladdr aa:87:fe:f7:fb:09 STALE
+fe80::d4d4:e2ff:fe7a:fe3d dev eth0 lladdr d6:d4:e2:7a:fe:3d STALE
+fe80::8898:faff:fe4c:acf7 dev eth0 lladdr 8a:98:fa:4c:ac:f7 STALE
