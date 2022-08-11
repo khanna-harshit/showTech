@@ -1,6 +1,12 @@
+#:import Clock kivy.clock.Clock
 #-----------------------------------------------------------------------------------------
 
 # Screen manager and declare all the screens
+# MyLayout is the first screen
+# MyPopup is the screen for the choosing the file
+# Analyse screen will be seen for 8 sec when we do analyses
+# Results screen will how the analyzed results
+
 Manager:
     MyLayout:
     MyPopup:
@@ -11,9 +17,12 @@ Manager:
  #----------------------------------------------------------------------------------------
 
 <Results@ScrollView>
+
     name:'Results'
     RelativeLayout:
+        # scrollview makes the page scrollable
         ScrollView:
+            # label with id result used to push analyse text
             Label:
                 id: result
                 markup: True
@@ -21,15 +30,9 @@ Manager:
                 height: self.texture_size[1]
                 text_size: self.width, None
                 text: ''
-        ScrollView:
-            GridLayout:
-                id: container1
-                cols: 1
-                size_hint: None, None
-                width: root.width
-                height: self.minimum_height  # let the GridLayout set its own height as needeed
-                pos_hint: {'center_x': .5, 'center_y': .5}
+
         BoxLayout:
+            # button use to go back to MYLayout screen
             Button:
                 text: "Back"
                 font_size: 24
@@ -45,15 +48,18 @@ Manager:
             orientation: "vertical"
             padding: 50
 		    spacing: 20
-            Image:
 
+		    # image used in analyse screen
+            Image:
                 source:'assets/Analyze.jpg'
                 keep_ratio: True
                 allow_stretch: True
                 opacity: 0.8
                 size_hint: 0.4, 0.4
                 pos_hint: {'center_x': 0.5, 'center_y': 0.75}
+
             Label:
+                # label with text analysing....
                 text: "Analysing....."
                 font_size: 24
                 size_hint: 1, 0.06
@@ -66,12 +72,15 @@ Manager:
     RelativeLayout:
         BoxLayout:
             size:root.width, root.height
-
             orientation: "vertical"
             padding:40
+            # Filechooser is used to choose a file from system
+
             FileChooserIconView:
                 id:filechooser
+                # Filter to only choose tar.gz file
                 filters: [lambda folder, filename:  filename.endswith('.tar.gz')]
+
             Button:
                 id: upload_file
                 text: "upload"
@@ -87,29 +96,22 @@ Manager:
     name: 'MyLayout'
     size:root.width, root.height
     orientation:"horizontal"
-    
-
     RelativeLayout:
         BoxLayout:
             padding:40
             orientation :"horizontal"
-
-            size_hint: 1,None
-            
+            size_hint: 1, None
             size: root.width , root.height
+
+            # used to show the label Show tech analyzer
             BoxLayout:
                 orientation :"vertical"
-
-                
                 GridLayout:
                     cols:1
-
-
-                   
+                    size_hint:1, 0.4
                     Label:
                         text: "Show Tech Analyser"
                         color: 30/255,144/255, 247/255, 0.8
-
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
@@ -117,20 +119,21 @@ Manager:
                                 size: self.size
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
-                        size_hint:0.35, 0.06
+                        size_hint:1,0.2
                         bold: True
                         font_size:40
-                    
 
-                GridLayout:
-
-                    size_hint:1, 0.2
-                    cols:5
+                # show the text "Paste the SONiC show tech file"
+                BoxLayout:
+                    size_hint:1, 0.6
+                    orientation:"horizontal"
+                    # put text on label "Paste the"
                     Label:
-                        text: "Paste the "
+                        text: "Paste the"
                         color: 0, 4/255, 8/255, 1
-                        #size_hint:0.35,0.06
-
+                        markup:True
+                        text_size: self.size
+                        halign:"left"
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
@@ -138,34 +141,46 @@ Manager:
                                 size: self.size
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
+                        size_hint:0.5,None
                         font_size:20
 
-                    Label:
-                        text: "SONIC "
-                        color: 0, 4/255, 8/255, 1
-                        size_hint:0.7, 0.06
-                        canvas.before:
-                            Color:
-                                rgba: 164/255, 163/255, 167/255, 0.83
-                            Rectangle:
-                                size: self.size
-                                pos: self.pos
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-
-                        font_size:20
-
+                    # drop down to choose the SONiC or DINT file
                     Button:
-                        text: 'show tech'
-                        font_size:20
-                        background_normal: ''
-                        #size_hint:0.38, 0.06
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        color:243/255, 11/255, 11/255, 0.8
-                        bold:True
+                        dropdown1: dropdown1.__self__
+                        id: btn1
+                        text: "[color=FFFFFF][b] SONiC[/b][/color]"
+                        on_release: dropdown1.open(self)
+                        on_parent: dropdown1.dismiss()
+                        size_hint_y: None
+                        markup:True
+                        size_hint:1, 0.5
+
+
+                    DropDown:
+                        id: dropdown1
+                        on_select: btn1.text = '{}'.format(args[1])
+                        Button:
+                            text: "[color=FFFFFF][b] SONiC[/b][/color]"
+                            size_hint_y: None
+                            height: '24dp'
+                            markup:True
+                            on_release: dropdown1.select("[color=FFFFFF][b] SONiC[/b][/color]")
+
+
+
+                        Button:
+                            text: "[color=FFFFFF][b] DINT[/b][/color]"
+                            size_hint_y: None
+                            height: '24dp'
+                            markup:True
+                            on_release: dropdown1.select("[color=FFFFFF][b] DINT[/b][/color]")
+                    # show the text on label "Show tech output into the textfield"
                     Label:
-                        text: "output into the textfield: "
+                        text: "show tech output into the textfield:"
                         color: 0, 4/255, 8/255, 1
-                        size_hint:0.7, 0.06
+                        markup:True
+                        text_size: self.size
+                        halign:"left"
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
@@ -173,21 +188,22 @@ Manager:
                                 size: self.size
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
-
                         font_size:20
                     Label:
-                        text:''
+                        text: ""
+                #text area to get the input
                 GridLayout:
                     cols:1
                     pos_hint:{'x':0 , 'y':1}
                     TextInput:
                         id:text_input
                         multiline:True
-
+                # to show to button "Analyse" "Reset"
                 GridLayout:
 
                     cols:3
-                    size_hint:1, 0.2
+                    size_hint:1, 0.3
+                    # To analyse text call analyse_text() function
                     Button:
                         text: 'Analyse'
                         font_size:20
@@ -195,8 +211,12 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         color:243/255, 11/255, 11/255, 0.8
                         bold:True
-                        size_hint:0.2, 0.06
+                        size_hint:0.2, 0.2
+                        text_size: self.size
+                        halign:"left"
+                        valign:"top"
                         on_press:root.analyse_text()
+                    # to reset text call reset_text() function
                     Button:
                         text: 'reset'
                         font_size:20
@@ -204,26 +224,24 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         color: 30/255,144/255, 247/255, 0.8
                         bold:True
-                        size_hint:0.2, 0.06
+                        size_hint:0.2, 0.2
+                        text_size: self.size
+                        halign:"left"
+                        valign:"top"
                         on_press:root.reset_text()
-
                     Label:
-
                         text:''
-                Label:
-                    text:''
-                    size_hint:1, 0.4
 
-                GridLayout:
-
-                    size_hint:1, 0.2
-
-                    cols:5
-
+                BoxLayout:
+                    size_hint:1,None
+                    orientation:"horizontal"
+                    # text "Upload the"
                     Label:
-                        text: "Upload the "
+                        text: "Upload the"
                         color: 0, 4/255, 8/255, 1
-
+                        markup:True
+                        text_size: self.size
+                        halign:"left"
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
@@ -231,35 +249,41 @@ Manager:
                                 size: self.size
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
-                        size_hint:0.35, 0.06
-
+                        size_hint:0.5, None
                         font_size:20
-                    Label:
-                        text: "SONIC "
-                        color: 0, 4/255, 8/255, 1
-                        size_hint:0.7, 0.06
-                        canvas.before:
-                            Color:
-                                rgba: 164/255, 163/255, 167/255, 0.83
-                            Rectangle:
-                                size: self.size
-                                pos: self.pos
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-
-                        font_size:20
+                    # dropdown to choose "SONiC" or "DINT"
                     Button:
-                        text: 'show tech'
-                        font_size:20
-                        background_normal: ''
-                        size_hint:0.38, 0.06
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        color:243/255, 11/255, 11/255, 0.8
-                        bold:True
+                        dropdown: dropdown.__self__
+                        id: btn
+                        text: "[color=FFFFFF][b] SONiC[/b][/color]"
+
+                        on_release: dropdown.open(self)
+                        on_parent: dropdown.dismiss()
+                        size_hint_y: None
+                        markup:True
+                        size_hint:1, 0.4
+                    DropDown:
+                        id: dropdown
+                        on_select: btn.text = '{}'.format(args[1])
+                        Button:
+                            text: "[color=FFFFFF][b]SONiC[/b][/color]"
+                            size_hint_y: None
+                            height: '24dp'
+                            markup:True
+                            on_release: dropdown.select("[color=FFFFFF][b] SONiC[/b][/color]")
+                        Button:
+                            text: "[color=FFFFFF][b] DINT[/b][/color]"
+                            size_hint_y: None
+                            height: '24dp'
+                            markup:True
+                            on_release: dropdown.select("[color=FFFFFF][b] DINT[/b][/color]")
 
                     Label:
-                        text: "file:"
+                        text:"show tech file:"
                         color: 0, 4/255, 8/255, 1
-
+                        markup:True
+                        text_size: self.size
+                        halign:"left"
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
@@ -267,15 +291,17 @@ Manager:
                                 size: self.size
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
-                        size_hint:0.08, 0.06
-
                         font_size:20
                     Label:
-                        text:''
+                        text:""
+
+
+
                 GridLayout:
+
                     size_hint:1, 0.2
                     cols:3
-
+                    # Button to choose file and opens MyPopup screen
                     Button:
                         text: 'Choose file'
                         font_size:20
@@ -286,7 +312,7 @@ Manager:
                         on_release:
                             app.root.current = 'MyPopup'
 
-
+                    # To show the file name
                     Label:
                         id: file_choosen
                         text:'no file choosen'
@@ -306,9 +332,9 @@ Manager:
 
                 GridLayout:
 
-                    size_hint:1, 0.2
+                    size_hint:1, 0.3
                     cols:3
-
+                    # button to analyse file calls analyse_file() function
                     Button:
                         text: 'Analyse'
                         font_size:20
@@ -316,9 +342,13 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         color:243/255, 11/255, 11/255, 0.8
                         bold:True
-                        size_hint:0.2, 0.02
+                        size_hint:0.2,0.2
+                        text_size: self.size
+                        halign:"left"
+                        valign:"top"
+                        on_press: Clock.schedule_once(root.switch, 8)
                         on_press:root.analyse_file()
-
+                    # Button to reset file calls reset_file() function
                     Button:
                         text: 'reset'
                         font_size:20
@@ -327,6 +357,9 @@ Manager:
                         color: 30/255,144/255, 247/255, 0.8
                         bold:True
                         size_hint:0.2, 0.2
+                        text_size: self.size
+                        halign:"left"
+                        valign:"top"
                         on_press: root.reset_file()
 
 

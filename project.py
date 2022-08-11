@@ -4,6 +4,7 @@ import datetime
 from kivy.uix.label import Label
 import tarfile
 import os
+import re
 from kivy.properties import ObjectProperty
 from kivy.uix.button import Button
 from kivy.clock import Clock, mainthread
@@ -29,9 +30,8 @@ from kivy.config import Config
 # ----------------------------------------------------------------------------------------------------------------
 kivy.require('1.9.0')
 
-kivy.config.Config.set('graphics','resizable', False)
-kivy.config.Config.set('graphics', 'width', '1050')
-kivy.config.Config.set('graphics', 'height', '600')
+kivy.config.Config.set('graphics','resizable', True)
+
 Config.write()
 
 
@@ -196,12 +196,96 @@ class MyLayout(Screen):
             str = ''
             for i in data:
                 if i['name'] == 'show interface status':
-                    str = i['contents']
+                    str+=self.show_interface_status(i)
+                if i['name'] == 'show ip interface':
+                    str+=self.show_ip_interface(i)
+                if i['name'] == 'show vlan summary':
+                    str+=self.show_vlan_summary(i)
                 print(i['name'])
             results.ids.result.text = str
 
         else:
             pass
+    def show_interface_status(self, i):
+        content=i['contents']
+        list=content.split('\n')
+        up=0
+        down=0
+        for item in list:
+            x=re.search('up', item)
+            y=re.search('down', item)
+            if x is None and y is None:
+                continue
+            elif x is None:
+                down=down+1
+            elif y is None:
+                up=up+1
+            elif x.span()[1]<y.span()[1]:
+                up=up+1
+            else:
+                down=down+1
+        string='[color=0000FF][b][size=30sp]Show Interface Status[/color][/b][/size]'
+        string+='\n\n\n'
+        string+='Number of UP Interfaces : '
+        string+= str(up)
+        string+='\n'
+        string+='Number of DOWN Interfaces :'
+        string+= str(down)
+        string += '\n\n\n'
+        string+=i['contents']
+        string += '\n\n\n'
+        return string
+
+    def show_ip_interface(self, i):
+        content = i['contents']
+        list = content.split('\n')
+        up = 0
+        down = 0
+        for item in list:
+            x = re.search('(?s:.*)up', item)
+            y = re.search('(?s:.*)down', item)
+            if x is None and y is None:
+                continue
+            elif x is None:
+                down = down + 1
+            elif y is None:
+                up = up + 1
+            elif x.span()[1] > y.span()[1]:
+                up = up + 1
+            else:
+                down = down + 1
+        string = '[color=0000FF][b][size=30sp]Show IP Interface[/color][/b][/size]'
+        string += '\n\n\n'
+        string += 'Number of UP Interfaces : '
+        string += str(up)
+        string += '\n'
+        string += 'Number of DOWN Interfaces :'
+        string += str(down)
+        string += '\n\n\n'
+        string += i['contents']
+        string += '\n\n\n'
+        return string
+
+
+    def show_vlan_summary(self, i):
+        content = i['contents']
+        list = content.split('\n')
+        count = 0
+        for item in list:
+            x = re.search('enabled', item)
+            y = re.search('disabled', item)
+            if x is None and y is None:
+                continue
+            else:
+                count = count + 1
+        string = '[color=0000FF][b][size=30sp]Show Vlan Summary[/color][/b][/size]'
+        string += '\n\n\n'
+        string += 'Number of entries : '
+        string += str(count)
+        string += '\n\n\n'
+        string += i['contents']
+        string += '\n\n\n'
+        return string
 
 
 # ---------------------------------------------------------------------------------------------------------------
