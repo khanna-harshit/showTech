@@ -27,6 +27,7 @@ Manager:
                 id: result
                 markup: True
                 size_hint_y: None
+                font_name:"Anonymous Pro"
                 height: self.texture_size[1]
                 text_size: self.width, None
                 text: ''
@@ -59,7 +60,7 @@ Manager:
                 pos_hint: {'center_x': 0.5, 'center_y': 0.75}
 
             Label:
-                # label with text analysing....
+                # label with text analysing...
                 text: "Analysing....."
                 font_size: 24
                 size_hint: 1, 0.06
@@ -144,7 +145,7 @@ Manager:
                         size_hint:0.5,None
                         font_size:20
 
-                    # drop down to choose the SONiC or DINT file
+                    # drop down to choose the SONiC or DENT file
                     Button:
                         dropdown1: dropdown1.__self__
                         id: btn1
@@ -153,7 +154,7 @@ Manager:
                         on_parent: dropdown1.dismiss()
                         size_hint_y: None
                         markup:True
-                        size_hint:1, 0.5
+                        size_hint:1, 0.4
 
 
                     DropDown:
@@ -169,11 +170,11 @@ Manager:
 
 
                         Button:
-                            text: "[color=FFFFFF][b] DINT[/b][/color]"
+                            text: "[color=FFFFFF][b] DENT[/b][/color]"
                             size_hint_y: None
                             height: '24dp'
                             markup:True
-                            on_release: dropdown1.select("[color=FFFFFF][b] DINT[/b][/color]")
+                            on_release: dropdown1.select("[color=FFFFFF][b] DENT[/b][/color]")
                     # show the text on label "Show tech output into the textfield"
                     Label:
                         text: "show tech output into the textfield:"
@@ -251,7 +252,7 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         size_hint:0.5, None
                         font_size:20
-                    # dropdown to choose "SONiC" or "DINT"
+                    # dropdown to choose "SONiC" or "DENT"
                     Button:
                         dropdown: dropdown.__self__
                         id: btn
@@ -272,11 +273,11 @@ Manager:
                             markup:True
                             on_release: dropdown.select("[color=FFFFFF][b] SONiC[/b][/color]")
                         Button:
-                            text: "[color=FFFFFF][b] DINT[/b][/color]"
+                            text: "[color=FFFFFF][b] DENT[/b][/color]"
                             size_hint_y: None
                             height: '24dp'
                             markup:True
-                            on_release: dropdown.select("[color=FFFFFF][b] DINT[/b][/color]")
+                            on_release: dropdown.select("[color=FFFFFF][b] DENT[/b][/color]")
 
                     Label:
                         text:"show tech file:"
@@ -366,5 +367,8 @@ Manager:
                     Label:
 
                         text:''
+
+
+
 
 #-------------------------------------------------------------------------------------------------------------

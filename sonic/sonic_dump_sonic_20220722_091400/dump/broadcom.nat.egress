@@ -1,4 +1,0 @@
-timeout --foreground 5m bcmcmd "l3 nat_egress show"
-l3 nat_egress show
-IDX   TYPE  ID    IP               MASK             L4Port RefCount
-drivshell>

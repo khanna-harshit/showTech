@@ -1,4 +1,0 @@
-timeout --foreground 5m bcmcmd "l2 show"
-l2 show
-mac=00:e0:ec:3b:e6:06 vlan=1 GPORT=0x0 modid=0 port=0/cpu0 Static CPU
-drivshell>

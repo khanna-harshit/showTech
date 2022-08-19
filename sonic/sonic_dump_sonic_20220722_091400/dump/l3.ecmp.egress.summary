@@ -1,3 +1,0 @@
-timeout --foreground 5m bcmcmd "l3 ecmp egress show"
-l3 ecmp egress show
-drivshell>

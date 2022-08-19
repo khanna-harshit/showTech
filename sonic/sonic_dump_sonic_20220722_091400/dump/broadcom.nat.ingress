@@ -1,7 +1,0 @@
-timeout --foreground 5m bcmcmd "l3 nat_ingress show"
-l3 nat_ingress show
-IDX   ID    IP               VRF   L4Port IPProto NextHop
-*****SNAT Entries*****
-*****DNAT Entries*****
-*****DNAT Pool Entries*****
-drivshell>

@@ -1,5 +1,0 @@
-timeout --foreground 5m bcmcmd "l3 l3table show"
-l3 l3table show
-Unit 0, free L3 table entries: 8192
-Entry VRF IP address       Mac Address           INTF MOD PORT    CLASS HIT    H/W Index
-drivshell>

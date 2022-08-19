@@ -1,8 +1,0 @@
-timeout --foreground 5m bcmcmd "l3 egress show"
-l3 egress show
-Entry  Mac                 Vlan INTF PORT MOD MPLS_LABEL ToCpu Drop RefCount L3MC
-100002  00:e0:ec:3b:e6:06    1    1     0    0        -1   no  yes    2   no
-100003  00:e0:ec:3b:e6:06    0 8191     0    0        -1   no   no   39   no
-100004  ff:ff:ff:ff:ff:ff    0    2    68    0        -1   no   no    0  yes
-100005  00:00:00:00:00:00    0 8191     0    0        -1   no  yes    0   no
-drivshell>

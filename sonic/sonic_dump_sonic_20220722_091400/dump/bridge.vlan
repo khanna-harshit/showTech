@@ -1,5 +1,0 @@
-port              vlan-id  
-docker0           1 PVID Egress Untagged
-Bridge            200
-dummy             1 PVID Egress Untagged
-Ethernet0         200

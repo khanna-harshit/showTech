@@ -1,5 +1,0 @@
-timeout --foreground 5m bcmcmd "multicast show"
-multicast show
-Group 0x2000001 (L3)
-	port ce0, encap id 400004
-drivshell>

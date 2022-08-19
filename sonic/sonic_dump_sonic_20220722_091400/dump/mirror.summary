@@ -1,4 +1,0 @@
-timeout --foreground 5m bcmcmd "mirror show"
-mirror show
-No mirror ports configured
-drivshell>

@@ -1,6 +1,0 @@
-Name      Connect Time    Last Read  Last Write  IPv4 Routes       IPv6 Routes    
---------------------------------------------------------------------------------
-static        1d06h44m     1d06h44m    1d06h43m       0/0              0/0       
-bgp           1d06h44m     1d06h44m    1d06h43m       0/0              0/0       
-vnc           1d06h44m     1d06h44m    1d06h43m       0/0              0/0       
-Routes column shows (added+updated)/deleted
