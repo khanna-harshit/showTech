@@ -12,25 +12,57 @@ Manager:
     MyPopup:
     Analyse:
     Results:
+    wrong_file:
 
 
  #----------------------------------------------------------------------------------------
+<CustomLabel>:
+
+    markup: True
+    id: content
+    size_hint_y: None
+    font_name:"Anonymous Pro"
+    height: self.texture_size[1]
+    text_size: self.width, None
+
+<wrong_file@ScrollView>
+    name:'wrong_file'
+    BoxLayout:
+        orientation: "vertical"
+        padding: 50
+		spacing: 20
+		Label:
+            # label with text analysing...
+            id: text
+            text: ''
+            font_size: 24
+            size_hint: 1, 0.06
+    BoxLayout:
+        # button use to go back to MYLayout screen
+        Button:
+            text: "Back"
+            font_size: 24
+            size_hint: 1, 0.06
+            on_press: root.ChangeFromResultsToMyLayout()
+
 
 <Results@ScrollView>
 
     name:'Results'
     RelativeLayout:
-        # scrollview makes the page scrollable
-        ScrollView:
-            # label with id result used to push analyse text
-            Label:
-                id: result
-                markup: True
-                size_hint_y: None
-                font_name:"Anonymous Pro"
-                height: self.texture_size[1]
-                text_size: self.width, None
-                text: ''
+        BoxLayout:
+            orientation: 'vertical'
+            padding: [20, 20, 20, 20]
+            ScrollView:
+                do_scroll_y: True
+                BoxLayout:
+                    orientation: 'vertical'
+                    id: sv_box
+                    size_hint_y: None
+                    height: self.minimum_height
+
+
+
 
         BoxLayout:
             # button use to go back to MYLayout screen
@@ -115,7 +147,7 @@ Manager:
                         color: 30/255,144/255, 247/255, 0.8
                         canvas.before:
                             Color:
-                                rgba: 164/255, 163/255, 167/255, 0.83
+                                rgba: 255/255, 255/255, 255/255, 0.83
                             Rectangle:
                                 size: self.size
                                 pos: self.pos
@@ -124,114 +156,121 @@ Manager:
                         bold: True
                         font_size:40
 
-                # show the text "Paste the SONiC show tech file"
-                BoxLayout:
-                    size_hint:1, 0.6
-                    orientation:"horizontal"
-                    # put text on label "Paste the"
-                    Label:
-                        text: "Paste the"
-                        color: 0, 4/255, 8/255, 1
-                        markup:True
-                        text_size: self.size
-                        halign:"left"
-                        canvas.before:
-                            Color:
-                                rgba: 164/255, 163/255, 167/255, 0.83
-                            Rectangle:
-                                size: self.size
-                                pos: self.pos
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        size_hint:0.5,None
-                        font_size:20
-
-                    # drop down to choose the SONiC or DENT file
-                    Button:
-                        dropdown1: dropdown1.__self__
-                        id: btn1
-                        text: "[color=FFFFFF][b] SONiC[/b][/color]"
-                        on_release: dropdown1.open(self)
-                        on_parent: dropdown1.dismiss()
-                        size_hint_y: None
-                        markup:True
-                        size_hint:1, 0.4
 
 
-                    DropDown:
-                        id: dropdown1
-                        on_select: btn1.text = '{}'.format(args[1])
-                        Button:
-                            text: "[color=FFFFFF][b] SONiC[/b][/color]"
-                            size_hint_y: None
-                            height: '24dp'
-                            markup:True
-                            on_release: dropdown1.select("[color=FFFFFF][b] SONiC[/b][/color]")
+# ----------------------------------------------------used for textarea ----------------------------------------------
+
+
+                ## show the text "Paste the SONiC show tech file"
+                #BoxLayout:
+                    #size_hint:1, 0.6
+                    #orientation:"horizontal"
+                    ## put text on label "Paste the"
+                    #Label:
+                        #text: "Paste the"
+                        #color: 0, 4/255, 8/255, 1
+                        #markup:True
+                        #text_size: self.size
+                        #halign:"left"
+                        #canvas.before:
+                            #Color:
+                                #rgba: 164/255, 163/255, 167/255, 0.83
+                            #Rectangle:
+                                #size: self.size
+                                #pos: self.pos
+                        #background_color: (164/255, 163/255, 167/255, 0.83)
+                        #size_hint:0.5,None
+                        #font_size:20
+
+                    ## drop down to choose the SONiC or DENT file
+                    #Button:
+                        #dropdown1: dropdown1.__self__
+                        #id: btn1
+                        #text: "[color=FFFFFF][b] SONiC[/b][/color]"
+                        #on_release: dropdown1.open(self)
+                        #on_parent: dropdown1.dismiss()
+                        #size_hint_y: None
+                        #markup:True
+                        #size_hint:1, 0.4
+
+
+                    #DropDown:
+                        #id: dropdown1
+                        #on_select: btn1.text = '{}'.format(args[1])
+                        #Button:
+                            #text: "[color=FFFFFF][b] SONiC[/b][/color]"
+                            #size_hint_y: None
+                            #height: '24dp'
+                            #markup:True
+                            #on_release: dropdown1.select("[color=FFFFFF][b] SONiC[/b][/color]")
 
 
 
-                        Button:
-                            text: "[color=FFFFFF][b] DENT[/b][/color]"
-                            size_hint_y: None
-                            height: '24dp'
-                            markup:True
-                            on_release: dropdown1.select("[color=FFFFFF][b] DENT[/b][/color]")
-                    # show the text on label "Show tech output into the textfield"
-                    Label:
-                        text: "show tech output into the textfield:"
-                        color: 0, 4/255, 8/255, 1
-                        markup:True
-                        text_size: self.size
-                        halign:"left"
-                        canvas.before:
-                            Color:
-                                rgba: 164/255, 163/255, 167/255, 0.83
-                            Rectangle:
-                                size: self.size
-                                pos: self.pos
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        font_size:20
-                    Label:
-                        text: ""
-                #text area to get the input
-                GridLayout:
-                    cols:1
-                    pos_hint:{'x':0 , 'y':1}
-                    TextInput:
-                        id:text_input
-                        multiline:True
-                # to show to button "Analyse" "Reset"
-                GridLayout:
+                        #Button:
+                            #text: "[color=FFFFFF][b] DENT[/b][/color]"
+                            #size_hint_y: None
+                            #height: '24dp'
+                            #markup:True
+                            #on_release: dropdown1.select("[color=FFFFFF][b] DENT[/b][/color]")
+                    ## show the text on label "Show tech output into the textfield"
+                    #Label:
+                        #text: "show tech output into the textfield:"
+                        #color: 0, 4/255, 8/255, 1
+                        #markup:True
+                        #text_size: self.size
+                        #halign:"left"
+                        #canvas.before:
+                            #Color:
+                                #rgba: 164/255, 163/255, 167/255, 0.83
+                            #Rectangle:
+                                #size: self.size
+                                #pos: self.pos
+                        #background_color: (164/255, 163/255, 167/255, 0.83)
+                        #font_size:20
+                    #Label:
+                        #text: ""
+                ##text area to get the input
+                #GridLayout:
+                    #cols:1
+                    #pos_hint:{'x':0 , 'y':1}
+                    #TextInput:
+                        #id:text_input
+                        #multiline:True
+                ## to show to button "Analyse" "Reset"
+                #GridLayout:
 
-                    cols:3
-                    size_hint:1, 0.3
-                    # To analyse text call analyse_text() function
-                    Button:
-                        text: 'Analyse'
-                        font_size:20
-                        background_normal: ''
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        color:243/255, 11/255, 11/255, 0.8
-                        bold:True
-                        size_hint:0.2, 0.2
-                        text_size: self.size
-                        halign:"left"
-                        valign:"top"
-                        on_press:root.analyse_text()
-                    # to reset text call reset_text() function
-                    Button:
-                        text: 'reset'
-                        font_size:20
-                        background_normal: ''
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        color: 30/255,144/255, 247/255, 0.8
-                        bold:True
-                        size_hint:0.2, 0.2
-                        text_size: self.size
-                        halign:"left"
-                        valign:"top"
-                        on_press:root.reset_text()
-                    Label:
-                        text:''
+                    #cols:3
+                    #size_hint:1, 0.3
+                    ## To analyse text call analyse_text() function
+                    #Button:
+                        #text: 'Analyse'
+                        #font_size:20
+                        #background_normal: ''
+                        #background_color: (164/255, 163/255, 167/255, 0.83)
+                        #color:243/255, 11/255, 11/255, 0.8
+                        #bold:True
+                        #size_hint:0.2, 0.2
+                        #text_size: self.size
+                        #halign:"left"
+                        #valign:"top"
+                        #on_press:root.analyse_text()
+                    ## to reset text call reset_text() function
+                    #Button:
+                        #text: 'reset'
+                        #font_size:20
+                        #background_normal: ''
+                        #background_color: (164/255, 163/255, 167/255, 0.83)
+                        #color: 30/255,144/255, 247/255, 0.8
+                        #bold:True
+                        #size_hint:0.2, 0.2
+                        #text_size: self.size
+                        #halign:"left"
+                        #valign:"top"
+                        #on_press:root.reset_text()
+                    #Label:
+                        #text:''
+
+# ----------------------------------------- End for textarea ----------------------------------------------------------
 
                 BoxLayout:
                     size_hint:1,None
@@ -257,7 +296,6 @@ Manager:
                         dropdown: dropdown.__self__
                         id: btn
                         text: "[color=FFFFFF][b] SONiC[/b][/color]"
-
                         on_release: dropdown.open(self)
                         on_parent: dropdown.dismiss()
                         size_hint_y: None
@@ -293,21 +331,22 @@ Manager:
                                 pos: self.pos
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         font_size:20
-                    Label:
-                        text:""
+                        halign:"center"
+                        valign:"bottom"
 
 
 
-                GridLayout:
 
-                    size_hint:1, 0.2
-                    cols:3
+                BoxLayout:
+                    padding:[0,20,0,0]
+                    size_hint:1, 0.1
+                    orientation: 'horizontal'
                     # Button to choose file and opens MyPopup screen
                     Button:
                         text: 'Choose file'
                         font_size:20
                         background_normal: ''
-                        size_hint:0.9, 0.06
+
                         background_color: 10/255, 139/255, 237/255, 0.8
                         color:0, 4/255, 8/255, 1
                         on_release:
@@ -316,25 +355,23 @@ Manager:
                     # To show the file name
                     Label:
                         id: file_choosen
-                        text:'no file choosen'
-                        font_size:15
+                        text:'no file chosen'
+                        font_size:13
                         color: 0, 4/255, 8/255, 1
                         canvas.before:
                             Color:
                                 rgba: 164/255, 163/255, 167/255, 0.83
-                            Rectangle:
-                                size: self.size
-                                pos: self.pos
-                        background_color: (164/255, 163/255, 167/255, 0.83)
-                        padding:
-                        size_hint:1, 0.06
-                    Label:
-                        text:''
 
-                GridLayout:
+                        background_color: (164/255, 163/255, 167/255, 0.83)
+                        halign:"center"
+                        valign:"bottom"
+
+
+                BoxLayout:
 
                     size_hint:1, 0.3
-                    cols:3
+                    orientation: 'horizontal'
+                    padding:[0,20,0,0]
                     # button to analyse file calls analyse_file() function
                     Button:
                         text: 'Analyse'
@@ -343,12 +380,11 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         color:243/255, 11/255, 11/255, 0.8
                         bold:True
-                        size_hint:0.2,0.2
                         text_size: self.size
                         halign:"left"
                         valign:"top"
-                        on_press: Clock.schedule_once(root.switch, 8)
                         on_press:root.analyse_file()
+
                     # Button to reset file calls reset_file() function
                     Button:
                         text: 'reset'
@@ -357,7 +393,7 @@ Manager:
                         background_color: (164/255, 163/255, 167/255, 0.83)
                         color: 30/255,144/255, 247/255, 0.8
                         bold:True
-                        size_hint:0.2, 0.2
+
                         text_size: self.size
                         halign:"left"
                         valign:"top"
