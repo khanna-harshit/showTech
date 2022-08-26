@@ -55,7 +55,7 @@ class Analyse(Screen):
     pass
 
 
-class wrong_file(Screen):
+class wrong_file_choosen(Screen):
 
     def ChangeFromResultsToMyLayout(self):
         kv.current = 'MyLayout'
@@ -330,10 +330,10 @@ class MyLayout(Screen):
 
         else:
             # for some file other than SONiC
-            results = self.manager.get_screen('wrong_file')
+            results = self.manager.get_screen('wrong_file_choosen')
             result_string = 'Choose a correct file !!'
             results.ids.text.text = result_string
-            self.manager.current = 'wrong_file'
+            self.manager.current = 'wrong_file_choosen'
 
     def change_screen(self):
         # this will change screen to Analyse and again change to result screen after 10 seconds
