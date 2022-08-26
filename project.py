@@ -27,6 +27,7 @@ from pymongo import MongoClient
 from kivy.uix.dropdown import DropDown
 import kivy
 from kivy.config import Config
+import win32timezone
 
 # ----------------------------------------------------------------------------------------------------------------
 kivy.require('1.9.0')
