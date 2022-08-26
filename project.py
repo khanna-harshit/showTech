@@ -255,22 +255,35 @@ class MyLayout(Screen):
                 elif i['name'] == 'show broadcom knet link':
                     # calls show_broadcom_knet_link() function
                     analyzed_commands['show broadcom knet link'] = self.show_broadcom_knet_link(i)
-                elif i['name'] == 'show fp summary':
-                    # calls show_fp_summary() function
-                    analyzed_commands['show fp summary'] = self.show_fp_summary(i)
+                # elif i['name'] == 'show fp summary':
+                #     # calls show_fp_summary() function
+                #     analyzed_commands['show fp summary'] = self.show_fp_summary(i)
                 elif i['name'] == 'show frr interfaces':
                     # calls show_frr_interfaces() function
                     analyzed_commands['show frr interfaces'] = self.show_frr_interfaces(i)
-
+                elif i['name'] == 'show broadcom ps':
+                    # calls show_broadcom_ps() function
+                    analyzed_commands['show broadcom ps'] = self.show_broadcom_ps(i)
                 print(i['name'])
             # arranging the commands according to priority
             str = ''
             if 'show platform summary' in analyzed_commands:
                 str += analyzed_commands['show platform summary']
                 del analyzed_commands['show platform summary']
+            if 'show broadcom ps' in analyzed_commands:
+                str += analyzed_commands['show broadcom ps']
+                del analyzed_commands['show broadcom ps']
+            if 'show broadcom knet link' in analyzed_commands and 'show interface status' in analyzed_commands:
+                if analyzed_commands['show broadcom knet link'][1][0] == analyzed_commands['show interface status'][1][0] and analyzed_commands['show broadcom knet link'][1][1] == analyzed_commands['show interface status'][1][1] and analyzed_commands['show broadcom knet link'][1][2] == analyzed_commands['show interface status'][1][2]:
+                    str+= '[color=#000000][size=20sp]' + 'NOTE: show broadcom knet link and show interface status ASIC and CLI command are matching\n\n' +'[/size][/color]'
+                else:
+                    str+= '[color=#000000][size=20sp]' + 'NOTE: show broadcom knet link and show interface status ASIC and CLI command are not matching\n\n' + '[/size][/color]'
             if 'show broadcom knet link' in analyzed_commands:
-                str += analyzed_commands['show broadcom knet link']
+                str += analyzed_commands['show broadcom knet link'][0]
                 del analyzed_commands['show broadcom knet link']
+            if 'show interface status' in analyzed_commands:
+                str += analyzed_commands['show interface status'][0]
+                del analyzed_commands['show interface status']
             if 'show frr interfaces' in analyzed_commands:
                 str += analyzed_commands['show frr interfaces']
                 del analyzed_commands['show frr interfaces']
@@ -283,6 +296,9 @@ class MyLayout(Screen):
             if 'show bridge vlan' in analyzed_commands:
                 str += analyzed_commands['show bridge vlan'][0]
                 del analyzed_commands['show bridge vlan']
+            if 'show vlan summary' in analyzed_commands:
+                str += analyzed_commands['show vlan summary']
+                del analyzed_commands['show vlan summary']
             if 'show top' in analyzed_commands:
                 str += analyzed_commands['show top']
                 del analyzed_commands['show top']
@@ -330,6 +346,39 @@ class MyLayout(Screen):
             Clock.schedule_once(self.extract_upload, 1)
         else:
             pass
+
+    def show_broadcom_ps(self, i):
+        content = i['contents']
+        items = content.split('\n')
+        up=0
+        down=0
+        result = ''
+        for item in items:
+            x = re.search('up ', item)
+            y = re.search('down ', item)
+            z = re.search('!ena ', item)
+            if x is not None:
+                up=up+1
+                result += '[color=#014421]' + item + '[/color]' + '\n'
+            elif y is not None or z is not None:
+                down=down+1
+                result+= '[color=#FF0000]'+ item+'[/color]'+'\n'
+            else:
+                result+= item+'\n'
+        string = '[color=#0000FF][b][size=30sp]show broadcom ps[/color][/b][/size]'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Analysis..[/color][/b][/size]'
+        string += '\n\n'
+        string += '[color=#09075d][b]number of total links     :' + str(up+down) + '[/color][/b]'
+        string += '\n'
+        string += '[color=#014421]' + 'number of up links  :' + str(up) + '[/color]' + '\n'
+        string += '[color=#FF0000]' + 'number of down links  :' + str(down) + '[/color]' + '\n'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
+        string += '\n\n'
+        string += result
+        string += '\n\n\n'
+        return string
 
     def show_frr_interfaces(self, i):
         content = i['contents']
@@ -406,16 +455,16 @@ class MyLayout(Screen):
         string += '[color=000000][b][size=20sp]Analysis..[/color][/b][/size]'
         string += '\n\n'
         string += '[color=#09075d][b]number of total interfaces      :' + str(up + down) + '[/color][/b]'
-        string += '\n\n'
+        string += '\n'
         string += '[color=#FF0000][b]number of total DOWN interfaces :' + str(down) + '[/color][/b]'
-        string += '\n\n'
+        string += '\n'
         string += '[color=#014421][b]number of total UP interfaces   :' + str(up) + '[/color][/b]'
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
         string += result
         string += '\n\n\n'
-        return string
+        return [string, [up+down, up, down]]
 
     def show_bridge_vlan(self, i):
         content = i['contents']
@@ -853,7 +902,7 @@ class MyLayout(Screen):
         string += '\n\n'
         string += result
         string += '\n\n\n'
-        return string
+        return [string, [up+down, up, down]]
 
     # This function searches for number of UP and DOWN Interfaces on the basis of oper.
     def show_ip_interface(self, i):
