@@ -321,6 +321,7 @@ class MyLayout(Screen):
                 elif i['name'] == 'show reboot cause':
                     # calls show_reboot_cause() function
                     analyzed_commands['show reboot cause'] = self.show_reboot_cause(i)
+
                 elif i['name'] == 'show docker stats':
                     # calls show_docker_stats() function
                     analyzed_commands['show docker stats'] = self.show_docker_stats(i)
@@ -458,33 +459,37 @@ class MyLayout(Screen):
         list = content.split('\n')
         up = 0
         down = 0
-        result = ''
+        result=''
+        up_entries=''
         down_entries=''
         for item in list:
             # regex for searching the statement which contains UP
             x = re.search('Up ', item)
             y = re.search('STATUS', item)
-            if len(item)!=0:
+            if len(item) != 0:
                 if y is not None:
                     result += '[color=#000000]' + item + '[/color]' + '\n'
                 elif x is None:
+                    result += '[color=DE0D82]' + item + '[/color]' + '\n'
                     down_entries += '[color=#FF0000]' + item + '[/color]' + '\n'
                     down = down + 1
                 else:
-                    result += '[color=#014421]' + item + '[/color]' + '\n'
+                    result += '[color=DE0D82]' + item + '[/color]' + '\n'
+                    up_entries += '[color=#014421]' + item + '[/color]' + '\n'
                     up = up + 1
 
         # These all statements are used for formatting the results to show in result screen.
-        result+=down_entries
         string = '[color=0000FF][b][size=30sp]show docker ps[/color][/b][/size]'
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Analysis..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=#014421]Number of entries with UP status    : [/color]'
-        string += '[color=#014421]' + str(up) + '[/color]'
-        string += '\n'
-        string += '[color=#FF0000]Number of entries with down status  : [/color]'
-        string += '[color=#FF0000]' + str(down) + '[/color]'
+        string += '[color=#09075d]Number of entries with UP status    : [/color]'
+        string += '[color=#09075d]' + str(up) + '[/color]\n\n'
+        string += up_entries
+        string += '\n\n'
+        string += '[color=#09075d]Number of entries with down status  : [/color]'
+        string += '[color=#09075d]' + str(down) + '[/color]\n\n'
+        string += down_entries
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
@@ -752,9 +757,9 @@ class MyLayout(Screen):
             if x is not None:
                 lst = item.split()
                 result += '[color=#014421]' + 'Percentage CPU sys ' + lst[3] + '[/color]'
+            data += '[color=DE0D82]' + item + '[/color]\n'
 
         # These all statements are used for formatting the results to show in result screen.
-        data+= '[color=DE0D82]'+item+'[/color]'
         string = '[color=#0000FF][b][size=30sp]show top[/color][/b][/size]'
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Analysis..[/color][/b][/size]'
