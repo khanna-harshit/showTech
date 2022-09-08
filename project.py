@@ -50,7 +50,7 @@ class Manager(ScreenManager):
 
 # ------------------------------------------------------------------------------------------------------------------
 
-# Analyse scren shown when the user click on analyse button.
+# Analyse screen shown when the user click on analyse button.
 # screen seen only for 8 seconds.
 class Analyse(Screen):
     pass
@@ -686,14 +686,21 @@ class MyLayout(Screen):
         items = content.split('\n')
         result = ''
         lst = []
+        flag = False
         for item in items:
             # regex
             x = re.search('Bridge', item)
+            lst1 = item.split()
             if x is not None:
                 result += '[color=#014421]' + item + '[/color]' + '\n'
                 values = item.split()
                 lst.append(values[1])
+                flag = True
+            elif flag == True and len(lst1)==1:
+                result += '[color=#014421]' + item + '[/color]' + '\n'
+                lst.append(lst1[0])
             else:
+                flag = False
                 result += '[color=DE0D82]'+item+'[/color]' + '\n'
 
         # These all statements are used for formatting the results to show in result screen.
