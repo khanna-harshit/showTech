@@ -59,6 +59,7 @@ class Analyse(Screen):
 class wrong_file_choosen(Screen):
 
     def ChangeFromResultsToMyLayout(self):
+
         kv.current = 'MyLayout'
 
 
@@ -212,7 +213,7 @@ class MyLayout(Screen):
                     pass
 
             # connect with database
-            print(insert_proc)
+            # print(insert_proc)
             client = MongoClient()
             # Connect with the port number and host
 
@@ -230,13 +231,27 @@ class MyLayout(Screen):
 
             results = self.manager.get_screen('Results')
 
-            db.collection1.insert_many(insert_dump)
-            db.collection2.insert_many(insert_proc)
+            x = db.collection1.insert_many(insert_dump)
+            y = db.collection2.insert_many(insert_proc)
 
             # result shown in "Results" Screen with the data fetch from database with the help of time
-            dump_data = list(db.collection1.find({'time': now}))
-            proc_data = list(db.collection2.find({'time': now}))
+            dump_data_temp = []
+            proc_data_temp = []
+            dump_data = []
+            proc_data = []
 
+            collection1_inserted_ids = x.inserted_ids
+            collection2_inserted_ids = y.inserted_ids
+            print(collection2_inserted_ids)
+            print(collection1_inserted_ids)
+            for items in collection1_inserted_ids:
+                dump_data_temp.append(list(db.collection1.find({'_id' : items})))
+            for items in collection2_inserted_ids:
+                proc_data_temp.append(list(db.collection2.find({'_id' : items})))
+            for items in proc_data_temp:
+                proc_data.append(items[0])
+            for items in dump_data_temp:
+                dump_data.append(items[0])
             str = ''
             # used to store the result of the analyzed commands so that they can be displayed with priority
             analyzed_commands = dict()
@@ -300,7 +315,7 @@ class MyLayout(Screen):
                 elif i['name'] == 'show version':
                     # calls show_version() function
                     if 'show meminfo' in analyzed_commands:
-                        print(analyzed_commands['show meminfo'])
+                        # print(analyzed_commands['show meminfo'])
                         meminfo_result = analyzed_commands['show meminfo']
                         analyzed_commands['show version'] = self.show_version(i, meminfo_result)
                     else:
@@ -355,7 +370,7 @@ class MyLayout(Screen):
             if 'show version' in analyzed_commands:
                 str += analyzed_commands['show version']
                 if 'show meminfo' in analyzed_commands:
-                    print(analyzed_commands['show meminfo'])
+                    # print(analyzed_commands['show meminfo'])
                     del analyzed_commands['show meminfo']
                 del analyzed_commands['show version']
             if 'show ip neigh' in analyzed_commands:
