@@ -59,7 +59,6 @@ class Analyse(Screen):
 class wrong_file_choosen(Screen):
 
     def ChangeFromResultsToMyLayout(self):
-
         kv.current = 'MyLayout'
 
 
@@ -74,7 +73,14 @@ class Results(Screen):
 
     # Button "Back" in the result screen which when clicked screen move to "first" screen
     def ChangeFromResultsToMyLayout(self):
+        self.removeAllBoxLayout()
         kv.current = 'MyLayout'
+
+    def removeAllBoxLayout(self):
+        rows = [i for i in self.ids.sv_box.children]
+        print(rows)
+        for row1 in rows:
+            self.ids.sv_box.remove_widget(row1)
 
 
 # ------------------------------------------------------------------------------------------------------------------
@@ -163,7 +169,7 @@ class MyLayout(Screen):
                 dump_files.append(file_name[i])
             if file_name_split[1] == 'proc':
                 proc_files.append(file_name[i])
-        print(proc_files)
+        # print(proc_files)
         if len(dump_files) != 0:
             Clock.schedule_once(self.switch, 10)
             file.extractall('/sonic')
@@ -242,12 +248,10 @@ class MyLayout(Screen):
 
             collection1_inserted_ids = x.inserted_ids
             collection2_inserted_ids = y.inserted_ids
-            print(collection2_inserted_ids)
-            print(collection1_inserted_ids)
             for items in collection1_inserted_ids:
-                dump_data_temp.append(list(db.collection1.find({'_id' : items})))
+                dump_data_temp.append(list(db.collection1.find({'_id': items})))
             for items in collection2_inserted_ids:
-                proc_data_temp.append(list(db.collection2.find({'_id' : items})))
+                proc_data_temp.append(list(db.collection2.find({'_id': items})))
             for items in proc_data_temp:
                 proc_data.append(items[0])
             for items in dump_data_temp:
@@ -357,15 +361,15 @@ class MyLayout(Screen):
                 new_key = key
                 for space in range(len(key), 35):
                     new_key = new_key + ' '
-                str += '[color=DE0D82]'+new_key + ': [/color]'
+                str += '[color=DE0D82]' + new_key + ': [/color]'
                 for entry in range(0, len(value)):
                     if entry != len(value) - 1:
                         new_entry = value[entry]
                         for space in range(len(entry), 25):
                             new_entry = new_entry + ' '
-                        str += '[color=DE0D82]'+new_entry + ',[/color]'
+                        str += '[color=DE0D82]' + new_entry + ',[/color]'
                     else:
-                        str += '[color=DE0D82]'+value[entry] + '[/color]\n'
+                        str += '[color=DE0D82]' + value[entry] + '[/color]\n'
             str += '\n\n\n'
             if 'show version' in analyzed_commands:
                 str += analyzed_commands['show version']
@@ -449,6 +453,7 @@ class MyLayout(Screen):
             label = CustomLabel(text=result_string, markup=True, font_name="Anonymous Pro")
             results.ids.sv_box.add_widget(label)
 
+
         else:
             # for some file other than SONiC
             results = self.manager.get_screen('wrong_file_choosen')
@@ -474,9 +479,9 @@ class MyLayout(Screen):
         list = content.split('\n')
         up = 0
         down = 0
-        result=''
-        up_entries=''
-        down_entries=''
+        result = ''
+        up_entries = ''
+        down_entries = ''
         for item in list:
             # regex for searching the statement which contains UP
             x = re.search('Up ', item)
@@ -519,7 +524,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -530,7 +535,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -541,7 +546,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -552,7 +557,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -585,7 +590,7 @@ class MyLayout(Screen):
                 down = down + 1
                 result += '[color=#FF0000]' + item + '[/color]' + '\n'
             else:
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
 
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=#0000FF][b][size=30sp]show broadcom ps[/color][/b][/size]'
@@ -617,7 +622,7 @@ class MyLayout(Screen):
                 count = count + 1
                 result += '[color=#014421]' + item + '[/color]' + '\n'
             else:
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=#0000FF][b][size=30sp]show frr interfaces[/color][/b][/size]'
         string += '\n\n\n'
@@ -638,7 +643,7 @@ class MyLayout(Screen):
         count = 0
         result = ''
         for item in items:
-            #regex
+            # regex
             x = re.search('EID', item)
             if x is not None:
                 count = count + 1
@@ -677,7 +682,7 @@ class MyLayout(Screen):
                 up = up + 1
                 result += '[color=#014421]' + item + '[/color]' + '\n'
             else:
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=#0000FF][b][size=30sp]show broadcom knet link[/color][/b][/size]'
         string += '\n\n\n'
@@ -711,12 +716,12 @@ class MyLayout(Screen):
                 values = item.split()
                 lst.append(values[1])
                 flag = True
-            elif flag == True and len(lst1)==1:
+            elif flag == True and len(lst1) == 1:
                 result += '[color=#014421]' + item + '[/color]' + '\n'
                 lst.append(lst1[0])
             else:
                 flag = False
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
 
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=#0000FF][b][size=30sp]show bridge vlan[/color][/b][/size]'
@@ -751,8 +756,8 @@ class MyLayout(Screen):
                 lst = item.split(':')
                 result += '[color=#014421]' + 'ASIC                   : ' + lst[1] + '[/color]' + '\n'
         if meminfo_result is not None:
-            result += '\n\n[color=#000000][size=20sp]' + 'Memory information (Linux)' + '[/size][/color]'+'\n\n'
-            result += '[color=#014421]' + meminfo_result + '[/color]'+'\n'
+            result += '\n\n[color=#000000][size=20sp]' + 'Memory information (Linux)' + '[/size][/color]' + '\n\n'
+            result += '[color=#014421]' + meminfo_result + '[/color]' + '\n'
 
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=#0000FF][b][size=30sp]show version[/color][/b][/size]'
@@ -763,7 +768,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+content+'[/color]'
+        string += '[color=DE0D82]' + content + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -771,7 +776,7 @@ class MyLayout(Screen):
     def show_top(self, i):
         content = i['contents']
         result = ''
-        data=''
+        data = ''
         items = content.split('\n')
         for item in items:
             # regex to find the CPU percentage
@@ -823,7 +828,7 @@ class MyLayout(Screen):
         string += '\n\n\n'
         string += '[color=000000][b][size=20sp]Data..[/color][/b][/size]'
         string += '\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -840,7 +845,7 @@ class MyLayout(Screen):
             # regex to find the Enabled entries
             y = re.search('Enabled', item)
             if x is None and y is None:
-                result += '[color=DE0D82]'+item+'[/color]\n'
+                result += '[color=DE0D82]' + item + '[/color]\n'
             elif x is not None:
                 result += '[color=#FF0000]' + item + '[/color]' + '\n\n'
                 disable = disable + 1
@@ -871,7 +876,7 @@ class MyLayout(Screen):
         content = i['contents']
         string = '[color=#0000FF][b][size=30sp]show mirror summary[/color][/b][/size]'
         string += '\n\n\n'
-        string += '[color=DE0D82]'+i['contents']+'[/color]'
+        string += '[color=DE0D82]' + i['contents'] + '[/color]'
         string += '\n\n\n'
         return string
 
@@ -1056,7 +1061,7 @@ class MyLayout(Screen):
             # regex match the statement starts with an IP address
             x = re.match('([01]?\d\d?|2[0-4]\d|25[0-5])(\.[01]?\d\d?|\.2[0-4]\d|\.25[0-5]){3}(/[0-2]\d|/3[0-2])', item)
             if x is None:
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
             else:
                 # regex search the statement which contains linkdown
                 y = re.search('linkdown', item)
@@ -1092,7 +1097,7 @@ class MyLayout(Screen):
         interface = dict()
         list = content.split('\n')
         count = 0
-        result=''
+        result = ''
         for item in list:
             # regex match the statement starts with a mac-address
             result += '[color=DE0D82]' + item + '[/color]\n'
@@ -1231,7 +1236,7 @@ class MyLayout(Screen):
                 # formatted text with color
                 result += '[color=#000000]' + item + '[/color]' + '\n'
             else:
-                result += '[color=DE0D82]'+item+'[/color]' + '\n'
+                result += '[color=DE0D82]' + item + '[/color]' + '\n'
                 count = count + 1
         # These all statements are used for formatting the results to show in result screen.
         string = '[color=0000FF][b][size=30sp]show vlan summary[/color][/b][/size]'
