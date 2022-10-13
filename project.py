@@ -28,6 +28,7 @@ from kivy.uix.dropdown import DropDown
 import kivy
 from kivy.config import Config
 import win32timezone
+import gzip
 
 # ----------------------------------------------------------------------------------------------------------------
 kivy.require('1.9.0')
@@ -78,7 +79,6 @@ class Results(Screen):
 
     def removeAllBoxLayout(self):
         rows = [i for i in self.ids.sv_box.children]
-        print(rows)
         for row1 in rows:
             self.ids.sv_box.remove_widget(row1)
 
@@ -160,16 +160,17 @@ class MyLayout(Screen):
         path = self.ids.file_choosen.text
         file = tarfile.open(path)
         file_name = file.getnames()
-
         dump_files = []
         proc_files = []
+        log_files = []
         for i in range(1, len(file_name) - 1):
             file_name_split = file_name[i].split('/')
             if file_name_split[1] == 'dump':
                 dump_files.append(file_name[i])
             if file_name_split[1] == 'proc':
                 proc_files.append(file_name[i])
-        # print(proc_files)
+            if file_name_split[1] == 'log':
+                log_files.append(file_name[i])
         if len(dump_files) != 0:
             Clock.schedule_once(self.switch, 10)
             file.extractall('/sonic')
@@ -177,6 +178,7 @@ class MyLayout(Screen):
             file.close()
             insert_dump = []
             insert_proc = []
+            insert_log = []
             for i in dump_files:
                 try:
                     f = open("/sonic" + '/' + i, 'r')
@@ -217,9 +219,23 @@ class MyLayout(Screen):
                                 {'path': 'sonic' + '/' + i, 'name': "show " + file_name, 'contents': text, 'time': now})
                 except:
                     pass
+            for i in log_files:
+                try:
+                    path_list = i.split('/')
+                    file_name = ''
+                    temp_name = path_list[-1]
+                    temp_name_list = temp_name.split('.')
+                    for j in range(0, len(temp_name_list)):
+                        if j == len(temp_name_list) - 1:
+                            file_name = file_name + temp_name_list[j]
+                        else:
+                            file_name = file_name + temp_name_list[j] + " "
+                    insert_log.append(
+                        {'path': 'sonic' + '/' + i, 'name': "show " + file_name, 'contents': text, 'time': now})
+                except:
+                    pass
 
             # connect with database
-            # print(insert_proc)
             client = MongoClient()
             # Connect with the port number and host
 
@@ -227,7 +243,7 @@ class MyLayout(Screen):
             db = client["ShowTechAnalyser"]
             collection1 = db["Dump_Data"]
             collection2 = db["Proc_Data"]
-
+            collection3 = db["Log_Data"]
             # Get the list of all files and directories
             # adding all the files to the database
 
@@ -239,23 +255,31 @@ class MyLayout(Screen):
 
             x = db.collection1.insert_many(insert_dump)
             y = db.collection2.insert_many(insert_proc)
+            z = db.collection3.insert_many(insert_log)
 
-            # result shown in "Results" Screen with the data fetch from database with the help of time
+            # result shown in "Results" Screen with the data fetch from database with the help of id
             dump_data_temp = []
             proc_data_temp = []
             dump_data = []
             proc_data = []
-
+            log_data_temp = []
+            log_data = []
             collection1_inserted_ids = x.inserted_ids
             collection2_inserted_ids = y.inserted_ids
+            collection3_inserted_ids = z.inserted_ids
             for items in collection1_inserted_ids:
                 dump_data_temp.append(list(db.collection1.find({'_id': items})))
             for items in collection2_inserted_ids:
                 proc_data_temp.append(list(db.collection2.find({'_id': items})))
+            for items in collection3_inserted_ids:
+                log_data_temp.append(list(db.collection3.find({'_id': items})))
             for items in proc_data_temp:
                 proc_data.append(items[0])
             for items in dump_data_temp:
                 dump_data.append(items[0])
+            for items in log_data_temp:
+                log_data.append(items[0])
+
             str = ''
             # used to store the result of the analyzed commands so that they can be displayed with priority
             analyzed_commands = dict()
@@ -265,6 +289,14 @@ class MyLayout(Screen):
                 if i['name'] == 'show bridge vlan':
                     # calls show_bridge_vlan() function
                     analyzed_commands['show bridge vlan'] = self.show_bridge_vlan(i)
+            for i in log_data:
+                if i['name'] == 'show syslog gz':
+                    # calls show_syslog_gz() function
+                    analyzed_commands['show syslog gz'] = self.show_syslog_gz(i)
+                if i['name'] == 'show syslog 1 gz':
+                    # calls show_syslog_1_gz() function
+                    analyzed_commands['show syslog 1 gz'] = self.show_syslog_1_gz(i)
+                print(i['name'] + '\n')
             for i in proc_data:
                 if i['name'] == 'show arp':
                     # calls show_arp() function
@@ -319,7 +351,6 @@ class MyLayout(Screen):
                 elif i['name'] == 'show version':
                     # calls show_version() function
                     if 'show meminfo' in analyzed_commands:
-                        # print(analyzed_commands['show meminfo'])
                         meminfo_result = analyzed_commands['show meminfo']
                         analyzed_commands['show version'] = self.show_version(i, meminfo_result)
                     else:
@@ -371,20 +402,33 @@ class MyLayout(Screen):
                     else:
                         str += '[color=DE0D82]' + value[entry] + '[/color]\n'
             str += '\n\n\n'
+
+            if 'show syslog gz' in analyzed_commands:
+                str += analyzed_commands['show syslog gz']
+                del analyzed_commands['show syslog gz']
+
+            if 'show syslog 1 gz' in analyzed_commands:
+                str += analyzed_commands['show syslog 1 gz']
+                del analyzed_commands['show syslog 1 gz']
+
             if 'show version' in analyzed_commands:
                 str += analyzed_commands['show version']
                 if 'show meminfo' in analyzed_commands:
                     # print(analyzed_commands['show meminfo'])
                     del analyzed_commands['show meminfo']
                 del analyzed_commands['show version']
+
             if 'show ip neigh' in analyzed_commands:
                 str += analyzed_commands['show ip neigh']
+
             if 'show arp' in analyzed_commands:
                 str += analyzed_commands['show arp']
                 del analyzed_commands['show arp']
+
             if 'show reboot cause' in analyzed_commands:
                 str += analyzed_commands['show reboot cause']
                 del analyzed_commands['show reboot cause']
+
             if 'show broadcom knet link' in analyzed_commands and 'show interface status' in analyzed_commands:
                 if analyzed_commands['show broadcom knet link'][1][0] == analyzed_commands['show interface status'][1][
                     0] and analyzed_commands['show broadcom knet link'][1][1] == \
@@ -394,48 +438,63 @@ class MyLayout(Screen):
                     str += '[color=#000000][size=20sp]' + 'NOTE: show interface status and show broadcom knet link commands are matching\n\n' + '[/size][/color]'
                 else:
                     str += '[color=#000000][size=20sp]' + 'NOTE: show interface status and show broadcom knet link commands are not matching\n\n' + '[/size][/color]'
+
             if 'show interface status' in analyzed_commands:
                 str += analyzed_commands['show interface status'][0]
                 del analyzed_commands['show interface status']
+
             if 'show broadcom knet link' in analyzed_commands:
                 str += analyzed_commands['show broadcom knet link'][0]
                 del analyzed_commands['show broadcom knet link']
+
             if 'show broadcom ps' in analyzed_commands:
                 str += analyzed_commands['show broadcom ps']
                 del analyzed_commands['show broadcom ps']
+
             if 'show bridge vlan' in analyzed_commands:
                 str += analyzed_commands['show bridge vlan'][0]
                 del analyzed_commands['show bridge vlan']
+
             if 'show vlan summary' in analyzed_commands:
                 str += analyzed_commands['show vlan summary']
                 del analyzed_commands['show vlan summary']
+
             if 'show config' in analyzed_commands:
                 str += analyzed_commands['show config']
                 del analyzed_commands['show config']
+
             if 'show docker stats' in analyzed_commands:
                 str += analyzed_commands['show docker stats']
                 del analyzed_commands['show docker stats']
+
             if 'show docker ps' in analyzed_commands:
                 str += analyzed_commands['show docker ps']
                 del analyzed_commands['show docker ps']
+
             if 'show frr interfaces' in analyzed_commands:
                 str += analyzed_commands['show frr interfaces']
                 del analyzed_commands['show frr interfaces']
+
             if 'show fp summary' in analyzed_commands:
                 str += analyzed_commands['show fp summary']
                 del analyzed_commands['show fp summary']
+
             if 'show top' in analyzed_commands:
                 str += analyzed_commands['show top']
                 del analyzed_commands['show top']
+
             if 'show lldpctl' in analyzed_commands:
                 str += analyzed_commands['show lldpctl']
                 del analyzed_commands['show lldpctl']
+
             if 'show bgp summary' in analyzed_commands:
                 str += analyzed_commands['show bgp summary']
                 del analyzed_commands['show bgp summary']
+
             if 'show mirror summary' in analyzed_commands:
                 str += analyzed_commands['show mirror summary']
                 del analyzed_commands['show mirror summary']
+
             if 'show port summary' in analyzed_commands:
                 str += analyzed_commands['show port summary']
                 del analyzed_commands['show port summary']
@@ -472,6 +531,70 @@ class MyLayout(Screen):
             Clock.schedule_once(self.extract_upload, 1)
         else:
             pass
+
+    # this function is used to show syslog
+    def show_syslog_gz(self, i):
+        # These all statements are used for formatting the results to show in result screen.
+        with gzip.open("/" + i['path'], mode="rt") as f:
+            file_content = f.read()
+            lst = file_content.split('\n')
+            error = ''
+            critical = ''
+            for x in lst:
+                y = re.search('ERROR', x)
+                z = re.search('CRITICAL', x)
+
+                if y is not None:
+                    error += x + '\n\n\n'
+                if z is not None:
+                    critical += x + '\n\n\n'
+        if error == '':
+            error = 'There is no error log present'
+        if critical == '':
+            critical = 'There is no critical log present'
+        string = '[color=#0000FF][b][size=30sp]show syslog[/color][/b][/size]'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Error..[/color][/b][/size]'
+        string += '\n\n'
+        string += '[color=#FF0000]' + error + '[/color]'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Critical..[/color][/b][/size]'
+        string += '\n\n'
+        string += '[color=#FF0000]' + critical + '[/color]'
+        string += '\n\n\n'
+        return string
+
+    # this function is used to show syslog 1
+    def show_syslog_1_gz(self, i):
+        # These all statements are used for formatting the results to show in result screen.
+        with gzip.open("/" + i['path'], mode="rt") as f:
+            file_content = f.read()
+            lst = file_content.split('\n')
+            error = ''
+            critical = ''
+            for x in lst:
+                y = re.search('ERROR', x)
+                z = re.search('CRITICAL', x)
+
+                if y is not None:
+                    error += x + '\n\n\n'
+                if z is not None:
+                    critical += x + '\n\n\n'
+        if error == '':
+            error = 'There is no error log present'
+        if critical == '':
+            critical = 'There is no critical log present'
+        string = '[color=#0000FF][b][size=30sp]show syslog 1[/color][/b][/size]'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Error..[/color][/b][/size]'
+        string += '\n\n'
+        string += '[color=#FF0000]' + error + '[/color]'
+        string += '\n\n\n'
+        string += '[color=000000][b][size=20sp]Critical..[/color][/b][/size]'
+        string += '\n\n'
+        string += '[color=#FF0000]' + critical + '[/color]'
+        string += '\n\n\n'
+        return string
 
     # this function is used to show the docker ps
     def show_docker_ps(self, i):
