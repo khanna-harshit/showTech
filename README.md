@@ -47,21 +47,23 @@ Before running this tool you need MongoDB to be pre installed in your system.
 
 # Demo
 
-## 1. This is the first screen that the user see (MyLayout is the name used in project.py and project.kv file) 
+## 1. This is the first page that the user see
 
 ![alt text](https://github.com/khanna-harshit/ShowTech/blob/main/assets/main.png)
 
 
-## 2. This is the second screen that the user see (MyPopup is the name used in project.py and project.kv file). This screen will be seen when the user wants to upload a file for the analysis purpose by clicking on the upload file button. 
+## 2. From here you need to select the show tech file which you want to analyze
 
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/upload_file.png)
 
 
-## 3. This is the third screen that the user see (Analyse is the name used in project.py and project.kv file)  
+## 3. This page will shown for few seconds 
+
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/analyze.png)
 
 
-## 4. This is the fourth screen that the user see (Results is the name used in project.py and project.kv file)  
+## 4. Here you will see your analyzed results
+
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/Results.png)
 
 
