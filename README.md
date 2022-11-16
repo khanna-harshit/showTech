@@ -1,6 +1,6 @@
 # ShowTechAnalyzer
 
-Show Tech Analyzer is a tool which is used to analyze/debug various commands used in the configuration of routers and switchs in networking. In this tool we have analyze various commands namely:
+Show Tech Analyzer is a tool which is used to analyze/debug various commands used in the configuration of routers and switchs in networking. This tool is used for SONiC commands. It highlights errors, warnings etc., of these various commands which are mentioned below. This tool uses the python kivy module for making its GUI. Commands analyzed are:
 
 1. show platform summary
 2. show syslog
@@ -15,6 +15,21 @@ Show Tech Analyzer is a tool which is used to analyze/debug various commands use
 11. show bridge vlan
 12. show vlan summary
 13. show vlan (Linux)
+14. show docker stats (without Linux)
+15. show docker ps
+16. show frr interfaces
+17. show top
+18. show lldp control
+19. show bgp summary
+20. show mirror summary
+21. show port summary
+22. show ip route
+23. show ip neighbour
+24. show bridge fdb
+25. show ip interface
+
+
+
 
 ![alt text](https://github.com/khanna-harshit/ShowTech/blob/main/assets/main.png)
 
