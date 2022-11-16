@@ -28,23 +28,40 @@ Show Tech Analyzer is a tool which is used to analyze/debug various commands use
 24. show bridge fdb
 25. show ip interface
 
+# prerequisite 
 
+Before running this tool you need MongoDB to be pre installed in your system.
 
+# How the tool works
+
+1. First you need to select show tech tar file 
+2. Then just click the "Analyze" button 
+3. After few seconds you will see the analyzed results.
+
+# Technologies used
+
+1. Kivy
+2. Python
+3. Datetime
+4. MongoDB
+
+# Demo
+
+## 1. This is the first screen that the user see (MyLayout is the name used in project.py and project.kv file) 
 
 ![alt text](https://github.com/khanna-harshit/ShowTech/blob/main/assets/main.png)
 
-This is the first screen that the user see (MyLayout is the name used in project.py and project.kv file) 
+
+## 2. This is the second screen that the user see (MyPopup is the name used in project.py and project.kv file). This screen will be seen when the user wants to upload a file for the analysis purpose by clicking on the upload file button. 
 
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/upload_file.png)
 
-This is the second screen that the user see (MyPopup is the name used in project.py and project.kv file). This screen will be seen when the user wants to upload a file for the analysis purpose by clicking on the upload file button. 
 
+## 3. This is the third screen that the user see (Analyse is the name used in project.py and project.kv file)  
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/analyze.png)
 
-This is the third screen that the user see (Analyse is the name used in project.py and project.kv file)  
 
+## 4. This is the fourth screen that the user see (Results is the name used in project.py and project.kv file)  
 ![alt tag](https://github.com/khanna-harshit/ShowTech/blob/main/assets/Results.png)
-This is the fourth screen that the user see (Results is the name used in project.py and project.kv file)  
-
 
 
