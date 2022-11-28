@@ -28,15 +28,18 @@ Show Tech Analyzer is a tool which is used to analyze/debug various commands use
 24. show bridge fdb
 25. show ip interface
 
-# prerequisite 
+# Prerequisite
 
-Before running this tool you need MongoDB to be pre installed in your system.
+### Before running this tool you need MongoDB to be pre installed in your system.
+### MongoDb suite
+### Tar file (show tech-[.tgz] )
+
 
 # How the tool works
 
-1. First you need to select show tech tar file 
-2. Then just click the "Analyze" button 
-3. After few seconds you will see the analyzed results.
+1. Tar file is uploaded to the tool.
+2. The next step invovles processing of the tar file(Analyze)
+3. The results are projected.
 
 # Technologies used
 
@@ -44,6 +47,7 @@ Before running this tool you need MongoDB to be pre installed in your system.
 2. Python
 3. Datetime
 4. MongoDB
+
 
 # Demo
 
